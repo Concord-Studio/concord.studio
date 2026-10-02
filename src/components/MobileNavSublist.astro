@@ -1,0 +1,67 @@
+---
+import type { StarlightRouteData } from "@astrojs/starlight/route-data";
+import MobileNavLink from "./MobileNavLink.astro";
+
+type SidebarEntry = StarlightRouteData["sidebar"][number];
+
+interface Props {
+  entries: SidebarEntry[];
+  depth?: number;
+}
+
+const { entries, depth = 0 } = Astro.props;
+---
+
+{
+  entries.map((entry) => {
+    if (entry.type === "link") {
+      return (
+        <MobileNavLink
+          href={entry.href}
+          label={entry.label}
+          isCurrent={entry.isCurrent}
+          attrs={entry.attrs}
+        />
+      );
+    }
+
+    if (depth === 0) {
+      return (
+        <div class="mobile-nav-block mobile-nav-section">
+          <div class="mobile-nav-label">{entry.label}</div>
+          <div class="mobile-nav-links">
+            <Astro.self entries={entry.entries} depth={depth + 1} />
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <>
+        <div class="mobile-nav-label">{entry.label}</div>
+        <Astro.self entries={entry.entries} depth={depth + 1} />
+      </>
+    );
+  })
+}
+
+<style>
+  .mobile-nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-nav-label {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+</style>

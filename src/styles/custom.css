@@ -1,3 +1,170 @@
-.site-title > img {
+@layer starlight, black, concord;
+
+@layer concord {
+  /* starlight-theme-black balances short blocks; descriptions read better with normal wrap */
+  .page-title > .page-description {
+    margin: 0;
+    color: var(--muted-foreground);
+    font-size: 1.05rem;
+    line-height: 1.75rem;
+    max-width: none;
+    text-wrap: pretty;
+
+    @media (min-width: 640px) {
+      font-size: 1rem;
+    }
+  }
+
+  .site-title > img {
     max-width: unset;
+  }
+
+  /* Mobile menu link alignment (global so dev HMR always picks it up) */
+  .mobile-nav {
+    --mobile-nav-link-label-padding: 0.625rem;
+  }
+
+  .mobile-nav .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2rem;
+    padding-block: 0.125rem;
+    padding-inline-start: var(--mobile-nav-link-label-padding);
+    text-decoration: none;
+    color: var(--foreground);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav .mobile-nav-link-label {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    border-radius: calc(var(--radius) - 2px);
+    width: fit-content;
+    max-width: 100%;
+    padding-inline: var(--mobile-nav-link-label-padding);
+    padding-block: 0.125rem;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .mobile-nav .mobile-nav-link[aria-current="page"] .mobile-nav-link-label {
+    color: var(--accent-foreground);
+    background-color: var(--accent);
+  }
+
+  @media (hover: hover) {
+    .mobile-nav .mobile-nav-link:hover .mobile-nav-link-label {
+      color: var(--accent-foreground);
+      background-color: var(--accent);
+    }
+  }
+
+  .mobile-nav .mobile-nav-link:active .mobile-nav-link-label {
+    color: var(--accent-foreground);
+    background-color: var(--accent);
+  }
+
+  .mobile-nav .mobile-nav-link:focus-visible .mobile-nav-link-label {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  .mobile-nav .mobile-nav-label {
+    padding-inline: 0.625rem;
+  }
+
+  /* Sidebar fills the pane; theme fixes .sidebar-content to 14rem */
+  .sidebar-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sidebar-content ul {
+    width: 100%;
+  }
+
+  .sidebar-content .container-sidebar-entry,
+  .sidebar-content .container-group-link {
+    width: 100%;
+  }
+
+  /* Sidebar section / group titles (Guides, Reference, Built-in components, …) */
+  .sidebar-content .entry-title {
+    padding-inline-start: 0;
+  }
+
+  /* Nested sidebar groups — no extra horizontal inset on the group wrapper */
+  .sidebar-content .container-sidebar-entry .container-sidebar-entry {
+    padding-inline: 0;
+    padding-block: calc(var(--spacing) * 1) 0;
+  }
+
+  /*
+  * starlight-theme-black disables the mobile TOC and uses a narrower main-frame
+  * padding. Below 72em Starlight uses a fixed "On this page" bar; from 72em up
+  * the TOC lives in the right sidebar (see second media query).
+  */
+  @media (max-width: 71.999em) {
+    mobile-starlight-toc {
+      display: block;
+    }
+
+    /* Theme keeps this aside hidden until 80rem, which also hides the mobile TOC */
+    .right-sidebar-container {
+      display: block;
+      width: auto;
+      padding-inline: 0;
+    }
+
+    .right-sidebar {
+      width: auto;
+      height: auto;
+      top: auto;
+      position: static;
+    }
+
+    html[data-has-toc] .main-frame {
+      padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+    }
+
+    /*
+     * Starlight insets the fixed TOC from 50em by --sl-content-inline-start, but
+     * this theme hides the nav sidebar until 64rem — the bar no longer aligns
+     * with a visible sidebar and its bottom border looks cut off.
+     */
+    mobile-starlight-toc nav {
+      inset-inline: 0;
+    }
+  }
+
+  /* Starlight default: right-hand TOC from 72em (theme delays until 80rem) */
+  @media (min-width: 72em) {
+    .right-sidebar-container {
+      display: flex;
+    }
+  }
+
+  /*
+  * starlight-theme-black sets height: calc(100svh - 10rem) on .sidebar-pane, which
+  * does not track the real header stack and can collapse to ~content height on
+  * shorter viewports. Use Starlight's stretch-to-bottom positioning instead.
+  */
+  .sidebar-pane {
+    top: auto;
+    height: auto;
+    max-height: none;
+    inset-block-start: var(--sl-nav-height);
+    inset-block-end: 0;
+  }
+
+  @media (max-width: 71.999em) {
+    .sidebar-pane {
+      inset-block-start: calc(
+        var(--sl-nav-height) + var(--sl-mobile-toc-height)
+      );
+    }
+  }
 }

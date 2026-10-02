@@ -1,0 +1,128 @@
+---
+import { Icon } from '@astrojs/starlight/components'
+import userConfig from 'virtual:starlight-theme-black-config'
+
+import MarkdownActions from 'starlight-theme-black/components/MarkdownActions.astro'
+import { resolveMarkdownActions } from 'starlight-theme-black/libs/config'
+
+const PAGE_TITLE_ID = '_top'
+
+const {
+  entry: { data, body },
+  pagination: { prev, next },
+} = Astro.locals.starlightRoute
+
+const { title, description } = data
+
+const resolved = resolveMarkdownActions(userConfig.docs, data.showMarkdownActions)
+
+const pageUrl = Astro.url.href
+
+const copyButtonContent = `---\ntitle: ${title}\ndescription: ${description}\n---\n\n${body}`.trim()
+---
+
+<div class="page-title">
+  <div class="page-title-header">
+    <h1 id={PAGE_TITLE_ID}>
+      {title}
+    </h1>
+
+    <div class="docs-nav">
+      <MarkdownActions enabled={resolved.enabled} agents={resolved.agents} content={copyButtonContent} url={pageUrl} />
+
+      <div class="nav-buttons">
+        {
+          prev && (
+            <a href={prev.href} aria-label="Previous page">
+              <Icon name="left-arrow" />
+            </a>
+          )
+        }
+
+        {
+          next && (
+            <a href={next.href} aria-label="Next page">
+              <Icon name="right-arrow" />
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  {description && <p class="page-description">{description}</p>}
+</div>
+
+<style>
+  @layer black {
+    .page-title {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--spacing) * 2);
+    }
+
+    .page-title-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: calc(var(--spacing) * 2);
+
+      @media (min-width: 768px) {
+        align-items: flex-start;
+      }
+    }
+
+    .page-title-header h1 {
+      margin: 0;
+      color: var(--foreground);
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 600;
+      letter-spacing: var(--tracking-tight);
+      scroll-margin: 5rem;
+    }
+
+    .docs-nav {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing) * 2);
+      flex-shrink: 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: calc(var(--spacing) * 2);
+      margin-left: auto;
+    }
+
+    .nav-buttons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(var(--spacing) * 8);
+      height: calc(var(--spacing) * 8);
+      border-radius: calc(var(--radius) * 0.8);
+      color: var(--secondary-foreground);
+      background: var(--secondary);
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .nav-buttons a:hover {
+      background: var(--accent);
+      color: var(--accent-foreground);
+    }
+
+    @media (max-width: 640px) {
+      .page-title-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .docs-nav {
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+  }
+</style>

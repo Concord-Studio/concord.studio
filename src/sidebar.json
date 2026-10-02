@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "api"
+  },
+  {
+    "label": "Built-in components",
+    "items": [
+      {
+        "slug": "api/builtins"
+      },
+      {
+        "slug": "api/builtins/key"
+      },
+      {
+        "slug": "api/builtins/serializable"
+      }
+    ]
+  },
+  {
+    "label": "Classes",
+    "items": [
+      {
+        "slug": "api/component"
+      },
+      {
+        "slug": "api/entity"
+      },
+      {
+        "slug": "api/list"
+      },
+      {
+        "slug": "api/system"
+      },
+      {
+        "slug": "api/world"
+      }
+    ]
+  },
+  {
+    "label": "Sub-modules",
+    "items": [
+      {
+        "slug": "api/components"
+      },
+      {
+        "slug": "api/type"
+      },
+      {
+        "slug": "api/utils"
+      }
+    ]
+  }
+]

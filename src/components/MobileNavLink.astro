@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  isCurrent?: boolean;
+  attrs?: Record<string, unknown>;
+}
+
+const { href, label, isCurrent = false, attrs = {} } = Astro.props;
+const { class: attrsClass, ...restAttrs } = attrs as {
+  class?: string;
+  [key: string]: unknown;
+};
+---
+
+<a
+  href={href}
+  class:list={["mobile-nav-link", attrsClass]}
+  aria-current={isCurrent ? "page" : undefined}
+  {...restAttrs}
+>
+  <span class="mobile-nav-link-label">{label}</span>
+</a>
