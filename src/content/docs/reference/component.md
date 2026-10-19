@@ -17,17 +17,6 @@ If the `concord` folder is in the root directory of your game, you can import th
 Component = require('concord.component')
 ```
 
-## Exports
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `getName` | [`fun(self:`](/api/funself) | Component): string |
-| `hasName` | [`fun(self:`](/api/funself) | Component): boolean |
-| `serialize` | [`fun(self:`](/api/funself) | Component): table\|nil |
-| `deserialize` | [`fun(self:`](/api/funself) | Component, data: table): nil |
-| `removed` | [`fun(self:`](/api/funself) | Component, replaced: boolean): nil |
-
-
 ## new
 
 Creates a new ComponentClass and registers it by name.

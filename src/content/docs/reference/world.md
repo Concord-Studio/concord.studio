@@ -17,13 +17,6 @@ If the `concord` folder is in the root directory of your game, you can import th
 World = require('concord.world')
 ```
 
-## Exports
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `addEntity` | [`fun(self:`](/api/funself) | World, e: Entity): World |
-
-
 ## new
 
 Creates a new World.
