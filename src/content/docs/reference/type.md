@@ -3,7 +3,7 @@ title: "Type"
 description: "Helper module to do easy type checking for Concord types"
 slug: api/type
 sidebar:
-  order: 8
+  order: 9
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 2
@@ -29,13 +29,13 @@ boolean = Type.isCallable( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isEntity
 
@@ -49,13 +49,13 @@ boolean = Type.isEntity( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isComponentClass
 
@@ -69,13 +69,13 @@ boolean = Type.isComponentClass( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isComponent
 
@@ -89,13 +89,13 @@ boolean = Type.isComponent( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isSystemClass
 
@@ -109,13 +109,13 @@ boolean = Type.isSystemClass( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isSystem
 
@@ -129,13 +129,13 @@ boolean = Type.isSystem( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isWorld
 
@@ -149,13 +149,13 @@ boolean = Type.isWorld( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## isFilter
 
@@ -169,10 +169,10 @@ boolean = Type.isFilter( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `t` | `any` | Object to check |
+| `t` | any | Object to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |

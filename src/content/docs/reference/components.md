@@ -29,13 +29,13 @@ boolean = Components.has( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to check |
+| `name` | string | Name of the ComponentClass to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## reject
 
@@ -49,13 +49,13 @@ string = Components.reject( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to reject |
+| `name` | string | Name of the ComponentClass to reject |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `string` | `string` |  |
+| `string` | string |  |
 
 ## try
 
@@ -71,16 +71,16 @@ boolean = Components.try( name, acceptRejected )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to check |
-| `acceptRejected` | `boolean` | Whether to accept names prefixed with the Reject Prefix. |
+| `name` | string | Name of the ComponentClass to check |
+| `acceptRejected` | boolean | Whether to accept names prefixed with the Reject Prefix. |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` | ok |
-|  | `ComponentClass\|string` | componentClass ComponentClass on success, or an error string on failure |
-|  | `string\|boolean` | rejected On success: the stripped Component name if the name had the Reject Prefix, otherwise false |
+| `boolean` | boolean | ok |
+|  | [ComponentClass](/api/component#componentclass)\|string | componentClass ComponentClass on success, or an error string on failure |
+|  | string\|boolean | rejected On success: the stripped Component name if the name had the Reject Prefix, otherwise false |
 
 ## get
 
@@ -94,10 +94,10 @@ component = Components.get( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to get |
+| `name` | string | Name of the ComponentClass to get |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `component` | `ComponentClass` |  |
+| `component` | [ComponentClass](/api/component#componentclass) |  |

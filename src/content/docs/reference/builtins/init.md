@@ -17,6 +17,14 @@ If the `concord` folder is in the root directory of your game, you can import th
 Builtins = require('concord.builtins')
 ```
 
+## Builtins
+
+#### Fields
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `serializable` | [Serializable](/api/builtins/serializable#serializable) |  |
+| `key` | [Key](/api/builtins/key#key) |  |
 
 ## Built-in components
 

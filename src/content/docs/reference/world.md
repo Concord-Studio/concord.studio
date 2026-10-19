@@ -3,7 +3,7 @@ title: "World"
 description: "A collection of Systems and Entities."
 slug: api/world
 sidebar:
-  order: 10
+  order: 11
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 2
@@ -14,9 +14,19 @@ tableOfContents:
 If the `concord` folder is in the root directory of your game, you can import this module like so:
 
 ```lua
-World = require('concord.world')
+concord.system = require('concord.world')
 ```
 
+## World
+
+A World emits events so Systems can iterate their Pools.
+A World contains any amount of Systems and Entities, plus optional named resources.
+
+#### Fields
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `addEntity` | fun(self: [World](/api/world#world),  e: [Entity](/api/entity#entity)): [World](/api/world#world) |  |
 ## new
 
 Creates a new World.
@@ -29,15 +39,17 @@ world = World.new( ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `...` | `SystemClass` | SystemClasses of Systems to add |
+| `...` | [SystemClass](/api/system#systemclass) | SystemClasses of Systems to add |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` | The new World |
+| `world` | [World](/api/world#world) | The new World |
 
-See also: `World#addSystems`
+### See also
+
+- [World:addSystems](/api/world#addsystems)
 
 ## addEntity
 
@@ -54,13 +66,13 @@ world = world:addEntity( e )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `e` | `Entity` | Entity to add |
+| `e` | [Entity](/api/entity#entity) | Entity to add |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## newEntity
 
@@ -74,7 +86,7 @@ world:newEntity()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `e` | `Entity` | the new Entity |
+| `e` | [Entity](/api/entity#entity) | the new Entity |
 
 ## query
 
@@ -93,8 +105,8 @@ Pass a function as onMatch. It is called once per matching Entity. Nothing is re
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `def` | `FilterDefinition` | Filter definition (component names, with ! prefix to reject) |
-| `onMatch` | `fun(e: Entity)` | Called for each match. |
+| `def` | [FilterDefinition](/api/filter#filterdefinition) | Filter definition (component names, with ! prefix to reject) |
+| `onMatch` | fun(e: [Entity](/api/entity#entity)) | Called for each match. |
 ---
 
 ```lua
@@ -107,14 +119,14 @@ Collect matches into a table and return it. onMatch is optional; when omitted, a
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `def` | `FilterDefinition` | Filter definition (component names, with ! prefix to reject) |
-| `onMatch?` | `table?` | Optional. Table to fill with matches; when omitted, a new empty table is allocated and returned. |
+| `def` | [FilterDefinition](/api/filter#filterdefinition) | Filter definition (component names, with ! prefix to reject) |
+| `onMatch?` | table? | Optional. Table to fill with matches; when omitted, a new empty table is allocated and returned. |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | `table` | The list of matches, or nil if onMatch was a callback |
+| `matches` | table | The list of matches, or nil if onMatch was a callback |
 
 ## removeEntity
 
@@ -131,13 +143,13 @@ world = world:removeEntity( e )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `e` | `Entity` | Entity to remove |
+| `e` | [Entity](/api/entity#entity) | Entity to remove |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## canFlush
 
@@ -154,7 +166,7 @@ boolean = world:canFlush()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## flush
 
@@ -170,7 +182,7 @@ world = world:flush()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## addSystem
 
@@ -187,15 +199,17 @@ world = world:addSystem( systemClass )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `systemClass` | `SystemClass` | SystemClass of System to add |
+| `systemClass` | [SystemClass](/api/system#systemclass) | SystemClass of System to add |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
-See also: `World#emit`
+### See also
+
+- [World:emit](/api/world#emit)
 
 ## addSystems
 
@@ -211,17 +225,18 @@ world = world:addSystems( ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `...` | `SystemClass` | SystemClasses of Systems to add |
+| `...` | [SystemClass](/api/system#systemclass) | SystemClasses of Systems to add |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
-See also: `World#addSystem`
+### See also
 
-See also: `World#emit`
+- [World:addSystem](/api/world#addsystem)
+- [World:emit](/api/world#emit)
 
 ## hasSystem
 
@@ -235,13 +250,13 @@ boolean = world:hasSystem( systemClass )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `systemClass` | `SystemClass` | SystemClass of System to check for |
+| `systemClass` | [SystemClass](/api/system#systemclass) | SystemClass of System to check for |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## getSystem
 
@@ -255,13 +270,13 @@ system = world:getSystem( systemClass )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `systemClass` | `SystemClass` | SystemClass of System to get |
+| `systemClass` | [SystemClass](/api/system#systemclass) | SystemClass of System to get |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | `System` | System to get |
+| `system` | [System](/api/system#system) | System to get |
 
 ## emit
 
@@ -282,14 +297,14 @@ world = world:emit( functionName, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `functionName` | `string` | Event name, or `"SystemName.event"` to call only that System |
-| `...` | `any` | Parameters passed to System's functions |
+| `functionName` | string | Event name, or `"SystemName.event"` to call only that System |
+| `...` | any | Parameters passed to System's functions |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## emitNoFlush
 
@@ -303,16 +318,18 @@ world = world:emitNoFlush( functionName, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `functionName` | `string` | Name of functions to call. |
-| `...` | `any` | Parameters passed to System's functions |
+| `functionName` | string | Name of functions to call. |
+| `...` | any | Parameters passed to System's functions |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
-See also: `World#emit`
+### See also
+
+- [World:emit](/api/world#emit)
 
 ## clear
 
@@ -329,7 +346,7 @@ world = world:clear()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## getEntities
 
@@ -343,7 +360,7 @@ list = world:getEntities()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `List` |  |
+| `list` | [List](/api/list#list) |  |
 
 ## getSystems
 
@@ -357,7 +374,7 @@ list = world:getSystems()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `List` |  |
+| `list` | [List](/api/list#list) |  |
 
 ## serialize
 
@@ -373,13 +390,13 @@ serializedWorld = world:serialize( ignoreKeys )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `ignoreKeys` | `boolean` | If true, Entity keys are omitted |
+| `ignoreKeys` | boolean | If true, Entity keys are omitted |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `serializedWorld` | `SerializedWorld` | Serialized world data |
+| `serializedWorld` | [SerializedWorld](/api/world#serializedworld) | Serialized world data |
 
 ## deserialize
 
@@ -393,15 +410,15 @@ world = world:deserialize( data, startClean, ignoreGenerator )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `data` | `SerializedWorld` | Serialized world data |
-| `startClean` | `boolean` | If true, existing Entities are cleared first |
-| `ignoreGenerator` | `boolean` | If true, the World's key generator state is left unchanged |
+| `data` | [SerializedWorld](/api/world#serializedworld) | Serialized world data |
+| `startClean` | boolean | If true, existing Entities are cleared first |
+| `ignoreGenerator` | boolean | If true, the World's key generator state is left unchanged |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## setKeyGenerator
 
@@ -415,14 +432,14 @@ world = world:setKeyGenerator( generator, initialState )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `generator` | `fun(state: any)` | : string\|number, any Callable that receives the current state and returns key, newState |
-| `initialState` | `any` | Initial state passed to the generator |
+| `generator` | fun(state: any): string\|number, | any Callable that receives the current state and returns key, newState |
+| `initialState` | any | Initial state passed to the generator |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## getEntityByKey
 
@@ -436,13 +453,13 @@ world:getEntityByKey( key )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `key` | `string\|number` | Key to look up |
+| `key` | string\|number | Key to look up |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Entity\|nil` |  |
+|  | [Entity](/api/entity#entity)\|nil |  |
 
 ## setResource
 
@@ -456,14 +473,14 @@ world = world:setResource( name, resource )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the resource |
-| `resource` | `any` | Resource to set |
+| `name` | string | Name of the resource |
+| `resource` | any | Resource to set |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## getResource
 
@@ -477,7 +494,7 @@ any = world:getResource( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the resource |
+| `name` | string | Name of the resource |
 
 ## onEntityAdded
 
@@ -491,7 +508,7 @@ world:onEntityAdded( e )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `e` | `Entity` | The Entity that was added |
+| `e` | [Entity](/api/entity#entity) | The Entity that was added |
 
 ## onEntityRemoved
 
@@ -505,7 +522,7 @@ world:onEntityRemoved( e )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `e` | `Entity` | The Entity that was removed |
+| `e` | [Entity](/api/entity#entity) | The Entity that was removed |
 
 ## beforeEmit
 
@@ -522,16 +539,16 @@ boolean = world:beforeEmit( systemName, functionName, listeners, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `systemName` | `string` | System name when emit used `"SystemName.event"`, otherwise nil |
-| `functionName` | `string` | Name of the event being emitted |
-| `listeners` | `table` | Listeners registered for this event, or nil |
-| `...` | `any` | Parameters passed to World:emit |
+| `systemName` | string | System name when emit used `"SystemName.event"`, otherwise nil |
+| `functionName` | string | Name of the event being emitted |
+| `listeners` | table | Listeners registered for this event, or nil |
+| `...` | any | Parameters passed to World:emit |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean?` | Truthy to skip listeners |
+| `boolean` | boolean? | Truthy to skip listeners |
 
 ## afterEmit
 
@@ -548,10 +565,10 @@ world:afterEmit( systemName, functionName, listeners, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `systemName` | `string` | System name when emit used `"SystemName.event"`, otherwise nil |
-| `functionName` | `string` | Name of the event being emitted |
-| `listeners` | `table` | Listeners registered for this event, or nil |
-| `...` | `any` | Parameters passed to World:emit |
+| `systemName` | string | System name when emit used `"SystemName.event"`, otherwise nil |
+| `functionName` | string | Name of the event being emitted |
+| `listeners` | table | Listeners registered for this event, or nil |
+| `...` | any | Parameters passed to World:emit |
 
 ## beforeSystemCallback
 
@@ -568,15 +585,15 @@ boolean = world:beforeSystemCallback( system, eventName, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | `System` | System that is being called |
-| `eventName` | `string` | Name of the event being emitted |
-| `...` | `any` | Parameters passed to World:emit |
+| `system` | [System](/api/system#system) | System that is being called |
+| `eventName` | string | Name of the event being emitted |
+| `...` | any | Parameters passed to World:emit |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean?` | Truthy to skip the System listener and afterSystemCallback |
+| `boolean` | boolean? | Truthy to skip the System listener and afterSystemCallback |
 
 ## afterSystemCallback
 
@@ -593,6 +610,19 @@ world:afterSystemCallback( system, eventName, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | `System` | System that is being called |
-| `eventName` | `string` | Name of the event being emitted |
-| `...` | `any` | Parameters passed to World:emit |
+| `system` | [System](/api/system#system) | System that is being called |
+| `eventName` | string | Name of the event being emitted |
+| `...` | any | Parameters passed to World:emit |
+
+## Types
+
+### SerializedWorld
+
+Payload from `World:serialize`, passed to `World:deserialize`.
+
+#### Fields
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `generator` | any | Snapshot of the World's key-generator state |
+| `[integer]` | table | Serialized Entity data from `Entity:serialize` |

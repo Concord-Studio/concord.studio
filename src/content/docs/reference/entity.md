@@ -17,6 +17,22 @@ If the `concord` folder is in the root directory of your game, you can import th
 concord.entity = require('concord.entity')
 ```
 
+## Entity
+
+contains components which are processed by systems.
+
+#### Fields
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `has` | fun(self: [Entity](/api/entity#entity),  name: string): boolean |  |
+| `remove` | fun(self: [Entity](/api/entity#entity),  name: string): [Entity](/api/entity#entity) |  |
+
+#### Private fields
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `__world?` | [World](/api/world#world) |  |
 ## new
 
 Creates a new Entity. Optionally queues it to be added to a World.
@@ -31,13 +47,13 @@ entity = Entity.new( world )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` | World to add the entity to |
+| `world` | [World](/api/world#world) | World to add the entity to |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entity` | `Entity` |  |
+| `entity` | [Entity](/api/entity#entity) |  |
 
 ## give
 
@@ -53,14 +69,14 @@ entity:give( name, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass |
-| `...` | `any` | Additional arguments to pass to the Component's populate function |
+| `name` | string | Name of the ComponentClass |
+| `...` | any | Additional arguments to pass to the Component's populate function |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Entity` |  |
+|  | [Entity](/api/entity#entity) |  |
 ---
 
 ```lua
@@ -73,7 +89,7 @@ Pass an existing Component instance (already populated, not attached to an entit
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `component` | `Component` |  |
+| `component` | [Component](/api/component#component) |  |
 
 ## ensure
 
@@ -89,14 +105,14 @@ entity:ensure( name, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass |
-| `...` | `any` | Additional arguments to pass to the Component's populate function |
+| `name` | string | Name of the ComponentClass |
+| `...` | any | Additional arguments to pass to the Component's populate function |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Entity` |  |
+|  | [Entity](/api/entity#entity) |  |
 ---
 
 ```lua
@@ -109,7 +125,7 @@ Pass an existing Component instance (already populated, not attached to an entit
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `component` | `Component` |  |
+| `component` | [Component](/api/component#component) |  |
 
 ## remove
 
@@ -123,13 +139,13 @@ entity:remove( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to remove |
+| `name` | string | Name of the ComponentClass to remove |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Entity` |  |
+|  | [Entity](/api/entity#entity) |  |
 
 ## assemble
 
@@ -143,14 +159,14 @@ entity:assemble( assemblage, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `assemblage` | `fun(entity: Entity, ...)` | Function that will assemble an entity |
-| `...` | `any` | Additional arguments to pass to the assemblage function. |
+| `assemblage` | fun(entity: [Entity](/api/entity#entity), ...) | Function that will assemble an entity |
+| `...` | any | Additional arguments to pass to the assemblage function. |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Entity` |  |
+|  | [Entity](/api/entity#entity) |  |
 
 ## destroy
 
@@ -166,7 +182,7 @@ entity:destroy()
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Entity` |  |
+|  | [Entity](/api/entity#entity) |  |
 
 ## has
 
@@ -180,13 +196,13 @@ boolean = entity:has( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to check |
+| `name` | string | Name of the ComponentClass to check |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## get
 
@@ -200,13 +216,13 @@ entity:get( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the ComponentClass to get |
+| `name` | string | Name of the ComponentClass to get |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `Component\|nil` | The Component, or nil if the Entity does not have it |
+|  | [Component](/api/component#component)\|nil | The Component, or nil if the Entity does not have it |
 
 ## getComponents
 
@@ -223,13 +239,13 @@ matches = entity:getComponents( output )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `output` | `table` | Table to copy into. A new table is created if omitted. |
+| `output` | table | Table to copy into. A new table is created if omitted. |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | `table` |  |
+| `matches` | table |  |
 
 ## inWorld
 
@@ -245,7 +261,7 @@ boolean = entity:inWorld()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## getWorld
 
@@ -259,7 +275,7 @@ world = entity:getWorld()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## serialize
 
@@ -275,13 +291,13 @@ matches = entity:serialize( ignoreKey )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `ignoreKey` | `boolean` | If true, the key Component is omitted |
+| `ignoreKey` | boolean | If true, the key Component is omitted |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | `table` | Serialized Entity data |
+| `matches` | table | Serialized Entity data |
 
 ## deserialize
 
@@ -295,4 +311,4 @@ entity:deserialize( data )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `data` | `table` | Serialized Entity data |
+| `data` | table | Serialized Entity data |

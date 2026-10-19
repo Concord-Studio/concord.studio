@@ -14,9 +14,20 @@ tableOfContents:
 If the `concord` folder is in the root directory of your game, you can import this module like so:
 
 ```lua
-Component = require('concord.component')
+concord.component = require('concord.component')
 ```
 
+## Component
+
+#### Fields
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `getName` | fun(self: [Component](/api/component#component)): string |  |
+| `hasName` | fun(self: [Component](/api/component#component)): boolean |  |
+| `serialize` | fun(self: [Component](/api/component#component)): table\|nil |  |
+| `deserialize` | fun(self: [Component](/api/component#component),  data: table): nil |  |
+| `removed` | fun(self: [Component](/api/component#component),  replaced: boolean): nil |  |
 ## new
 
 Creates a new ComponentClass and registers it by name.
@@ -29,14 +40,14 @@ component = Component.new( name, populate )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Unique name of the ComponentClass |
-| `populate` | `fun(component: Component, ...)` | : nil Function that populates a Component with values |
+| `name` | string | Unique name of the ComponentClass |
+| `populate` | fun(component: [Component](/api/component#component), ...): nil | Function that populates a Component with values |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `component` | `ComponentClass` |  |
+| `component` | [ComponentClass](/api/component#componentclass) |  |
 
 ## hasName
 
@@ -50,7 +61,7 @@ boolean = component:hasName()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## getName
 
@@ -64,7 +75,7 @@ string = component:getName()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `string` | `string` |  |
+| `string` | string |  |
 
 ## removed
 
@@ -78,7 +89,7 @@ component:removed( replaced )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `replaced` | `boolean` | True when the Component is being overwritten, false when it is being removed |
+| `replaced` | boolean | True when the Component is being overwritten, false when it is being removed |
 
 ## serialize
 
@@ -92,7 +103,7 @@ component:serialize()
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `table\|nil` | Serialized data, or nil to omit this Component |
+|  | table\|nil | Serialized data, or nil to omit this Component |
 
 ## deserialize
 
@@ -106,4 +117,12 @@ component:deserialize( data )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `data` | `table` | Serialized data to copy onto this Component |
+| `data` | table | Serialized data to copy onto this Component |
+
+## Types
+
+### ComponentClass
+
+Registered component type returned by `Component.new` / `Component()`.
+
+Extends [Component](/api/component#component).

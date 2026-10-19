@@ -3,7 +3,7 @@ title: "Utils"
 description: "Helper module for misc operations"
 slug: api/utils
 sidebar:
-  order: 9
+  order: 10
 ---
 
 ## Require
@@ -26,9 +26,9 @@ Utils.error( level, str, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `level` | `integer` | Error level passed to error(), plus one |
-| `str` | `string` | Format string |
-| `...` | `any` | Format arguments |
+| `level` | integer | Error level passed to error(), plus one |
+| `str` | string | Format string |
+| `...` | any | Format arguments |
 
 ## shallowCopy
 
@@ -42,14 +42,14 @@ matches = Utils.shallowCopy( orig, target )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `orig` | `table` | Table to copy from |
-| `target` | `table` | Table to copy into |
+| `orig` | table | Table to copy from |
+| `target` | table | Table to copy into |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | `table` | target |
+| `matches` | table | target |
 
 ## loadNamespace
 
@@ -68,11 +68,11 @@ Utils.loadNamespace( pathOrFiles, namespace )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `pathOrFiles` | `string\|table` | A directory path or a table of require paths |
-| `namespace` | `table` | Table that will hold the required files |
+| `pathOrFiles` | string\|table | A directory path or a table of require paths |
+| `namespace` | table | Table that will hold the required files |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `table\|nil` | namespace The namespace table |
+|  | table\|nil | namespace The namespace table |

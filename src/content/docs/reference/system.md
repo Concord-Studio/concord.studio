@@ -3,7 +3,7 @@ title: "System"
 description: "Iterates over Entities. From these Entities it gets Components and modifies them."
 slug: api/system
 sidebar:
-  order: 7
+  order: 8
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 2
@@ -17,6 +17,10 @@ If the `concord` folder is in the root directory of your game, you can import th
 System = require('concord.system')
 ```
 
+## System
+
+A System contains 0 or more Pools.
+A System is contained by 1 World.
 ## new
 
 Creates a new SystemClass.
@@ -29,14 +33,14 @@ system = System.new( name, definition )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | `string` | Name of the System. If the first argument is not a string, it is treated as the definition. |
-| `definition` | `table<string,` | FilterDefinition> A table containing filters (name = {components...}) |
+| `name` | string | Name of the System. If the first argument is not a string, it is treated as the definition. |
+| `definition` | table<string, | FilterDefinition> A table containing filters (name = {components...}) |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | `SystemClass` |  |
+| `system` | [SystemClass](/api/system#systemclass) |  |
 ---
 
 ```lua
@@ -47,13 +51,13 @@ system = System.new( definition )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `definition` | `table<string` | FilterDefinition> A table containing filters (name = {components...}) |
+| `definition` | table<string | FilterDefinition> A table containing filters (name = {components...}) |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | `SystemClass` |  |
+| `system` | [SystemClass](/api/system#systemclass) |  |
 
 ## setEnabled
 
@@ -67,13 +71,13 @@ system = system:setEnabled( enable )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `enable` | `boolean` |  |
+| `enable` | boolean |  |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | `System` |  |
+| `system` | [System](/api/system#system) |  |
 
 ## isEnabled
 
@@ -87,7 +91,7 @@ boolean = system:isEnabled()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## getWorld
 
@@ -101,7 +105,7 @@ world = system:getWorld()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` |  |
+| `world` | [World](/api/world#world) |  |
 
 ## init
 
@@ -115,7 +119,7 @@ system:init( world )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `world` | `World` | The World the System was added to |
+| `world` | [World](/api/world#world) | The World the System was added to |
 
 ## onEnabled
 
@@ -132,3 +136,11 @@ Callback for when a System is disabled.
 ```lua
 system:onDisabled()
 ```
+
+## Types
+
+### SystemClass
+
+Registered system type returned by `System.new` / `System()`.
+
+Extends [System](/api/system#system).

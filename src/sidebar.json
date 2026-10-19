@@ -26,6 +26,9 @@
         "slug": "api/entity"
       },
       {
+        "slug": "api/filter"
+      },
+      {
         "slug": "api/list"
       },
       {

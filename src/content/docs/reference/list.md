@@ -3,7 +3,7 @@ title: "List"
 description: "Data structure that allows for fast removal at the cost of order."
 slug: api/list
 sidebar:
-  order: 6
+  order: 7
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 2
@@ -29,7 +29,7 @@ list = List.new()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `List` |  |
+| `list` | [List](/api/list#list) |  |
 
 ## add
 
@@ -46,13 +46,13 @@ list = list:add( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `obj` | `any` | Object to add |
+| `obj` | any | Object to add |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `List` |  |
+| `list` | [List](/api/list#list) |  |
 
 ## remove
 
@@ -66,13 +66,13 @@ list:remove( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `obj` | `any` | Object to remove |
+| `obj` | any | Object to remove |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | `List\|nil` | Returns self if removed; nil if the object was not in the List |
+|  | [List](/api/list#list)\|nil | Returns self if removed; nil if the object was not in the List |
 
 ## clear
 
@@ -88,7 +88,7 @@ list = list:clear()
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `List` |  |
+| `list` | [List](/api/list#list) |  |
 
 ## has
 
@@ -102,13 +102,13 @@ boolean = list:has( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `obj` | `any` | Object to check for |
+| `obj` | any | Object to check for |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | `boolean` |  |
+| `boolean` | boolean |  |
 
 ## get
 
@@ -122,7 +122,7 @@ any = list:get( i )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `i` | `integer` | Index to get from |
+| `i` | integer | Index to get from |
 
 ## indexOf
 
@@ -138,13 +138,13 @@ integer = list:indexOf( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `obj` | `any` | Object to get index of |
+| `obj` | any | Object to get index of |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `integer` | `integer` | index of object in the List. |
+| `integer` | integer | index of object in the List. |
 
 ## sort
 
@@ -160,13 +160,13 @@ list = list:sort( order )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `order` | `fun(a: any, b: any)` | : boolean Function that takes two items (a and b) and returns true if a should go before b. |
+| `order` | fun(a: any,  b: any): boolean | Function that takes two items (a and b) and returns true if a should go before b. |
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `List` |  |
+| `list` | [List](/api/list#list) |  |
 
 ## onAdded
 
@@ -180,7 +180,7 @@ list:onAdded( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `obj` | `any` | Object that was added |
+| `obj` | any | Object that was added |
 
 ## onRemoved
 
@@ -196,4 +196,4 @@ list:onRemoved( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `obj` | `any` | Object that was removed |
+| `obj` | any | Object that was removed |

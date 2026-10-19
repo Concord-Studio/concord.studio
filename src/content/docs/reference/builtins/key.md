@@ -14,6 +14,11 @@ If the `concord` folder is in the root directory of your game, you can import th
 Key = require('concord.builtins.key')
 ```
 
+## Key
+
+The Entity must belong to a World. Calling the Component returns the key value.
+
+Extends [ComponentClass](/api/component#componentclass).
 ## deserialize
 
 Assigns a key from serialized data.
@@ -26,7 +31,7 @@ key:deserialize( data )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `data` | `string\|number` | Previously serialized key value |
+| `data` | string\|number | Previously serialized key value |
 
 ## removed
 
@@ -40,4 +45,4 @@ key:removed( replaced )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `replaced` | `boolean` | True when the Component is being overwritten |
+| `replaced` | boolean | True when the Component is being overwritten |
