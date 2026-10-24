@@ -19,6 +19,11 @@ Concord = require('concord')
 
 ## Concord
 
+Entry point: `local Concord = require("concord")` (adjust the path to your package layout).
+Exports `Entity`, `Component`, `Components`, `System`, `World`, `Type`, `utils`, and `builtins`.
+Types are callable constructors, e.g. `Concord.World()`, `Concord.Entity(world)`.
+Lowercase field names are deprecated compatibility aliases for the uppercase types.
+
 #### Fields
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ Concord = require('concord')
 | `Components` | [Components](/api/components#components) |  |
 | `System` | [System](/api/system#system) |  |
 | `World` | [World](/api/world#world) |  |
+| `Type` | [Type](/api/type#type) |  |
 | `utils` | [Utils](/api/utils#utils) |  |
 | `builtins` | [Builtins](/api/builtins#builtins) |  |
 | `_VERSION` | string |  |
@@ -36,16 +42,16 @@ Concord = require('concord')
 
 ## Classes
 
-- [Component](/api/component) — A pure data container that is contained by a single entity.
-- [Entity](/api/entity) — An object that exists in a world. An entity
-- [Filter](/api/filter) — List of component names for one filter (`!name` to reject).
+- [Component](/api/component) — A pure data container attached to a single Entity.
+- [Entity](/api/entity) — An object in a World that holds Components processed by Systems.
+- [Filter](/api/filter) — List of component names for one filter (`!name` to reject, or `Components.reject`).
 - [List](/api/list) — Data structure that allows for fast removal at the cost of order.
-- [System](/api/system) — Iterates over Entities. From these Entities it gets Components and modifies them.
+- [System](/api/system) — Iterates over Entities, reads their Components, and updates game state.
 - [World](/api/world) — A collection of Systems and Entities.
 
 ## Sub-modules
 
-- [Components](/api/components) — Container for registered ComponentClasses
-- [Type](/api/type) — Helper module to do easy type checking for Concord types
+- [Components](/api/components) — Container for registered ComponentClasses.
+- [Type](/api/type) — Runtime type predicates for Concord values (extension code, tooling, defensive checks).
 - [Utils](/api/utils) — Helper module for misc operations
 - [Overview](/api/builtins) — All the built-in components.

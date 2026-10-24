@@ -1,6 +1,6 @@
 ---
 title: "Components"
-description: "Container for registered ComponentClasses"
+description: "Container for registered ComponentClasses."
 slug: api/components
 sidebar:
   order: 4
@@ -17,87 +17,20 @@ If the `concord` folder is in the root directory of your game, you can import th
 concord.component = require('concord.components')
 ```
 
-## has
+## Components
 
-Returns true if the container has the ComponentClass with the specified name
+Use `Components.get(name)`, `Components.has(name)`, or `Components[name]` / `Components.name` (same as get; errors if missing).
 
-```lua
-boolean = Components.has( name )
-```
-
-### Arguments
+#### Fields
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | string | Name of the ComponentClass to check |
+| `__REJECT_PREFIX` | string | Reject prefix for filter lists (`"!"`); see `Components.reject` and FilterDefinition |
+## Methods
 
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `boolean` | boolean |  |
-
-## reject
-
-Prefix a component's name with the currently set Reject Prefix
-
-```lua
-string = Components.reject( name )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `name` | string | Name of the ComponentClass to reject |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `string` | string |  |
-
-## try
-
-Returns true and the ComponentClass if one was registered with the specified name
-
-or false and an error otherwise
-
-```lua
-boolean = Components.try( name, acceptRejected )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `name` | string | Name of the ComponentClass to check |
-| `acceptRejected` | boolean | Whether to accept names prefixed with the Reject Prefix. |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `boolean` | boolean | ok |
-|  | [ComponentClass](/api/component#componentclass)\|string | componentClass ComponentClass on success, or an error string on failure |
-|  | string\|boolean | rejected On success: the stripped Component name if the name had the Reject Prefix, otherwise false |
-
-## get
-
-Returns the ComponentClass with the specified name
-
-```lua
-component = Components.get( name )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `name` | string | Name of the ComponentClass to get |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `component` | [ComponentClass](/api/component#componentclass) |  |
+| Method | Description |
+| --- | --- |
+| [Components.has](/api/components/has) | Returns true if the container has the ComponentClass with the specified name |
+| [Components.reject](/api/components/reject) | Prefix a component's name with the currently set Reject Prefix |
+| [Components.try](/api/components/try) | Returns true and the ComponentClass if one was registered with the specified name |
+| [Components.get](/api/components/get) | Returns the ComponentClass with the specified name |

@@ -1,6 +1,6 @@
 ---
 title: "System"
-description: "Iterates over Entities. From these Entities it gets Components and modifies them."
+description: "Iterates over Entities, reads their Components, and updates game state."
 slug: api/system
 sidebar:
   order: 8
@@ -19,128 +19,36 @@ System = require('concord.system')
 
 ## System
 
-A System contains 0 or more Pools.
-A System is contained by 1 World.
-## new
+A SystemClass is a template registered on a World via `World:addSystem`.
+Each instance belongs to one World and holds zero or more Pools (one per filter key in the definition).
+**Pools:** Keys in the definition table become fields on the system instance, each holding a `Pool`
+(default `List`). Iterate with `ipairs(system.poolName)`; when the pool is a `List`, use `pool.size`.
+**Event listeners:** Every function on the SystemClass except `init`, `onEnabled`, and `onDisabled`
+is registered when the system is added. `World:emit("callbackName", ...)` invokes those functions
+on enabled system instances. Use `System.new("Name", ...)` and `World:emit("Name.callback", ...)`
+to target one system.
+**Flush and pools:** On `World:flush`, added, removed, and dirty Entities are processed;
+each system's filters re-evaluate matching Entities and update pool membership.
 
-Creates a new SystemClass.
-
-```lua
-system = System.new( name, definition )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `name` | string | Name of the System. If the first argument is not a string, it is treated as the definition. |
-| `definition` | table<string, | FilterDefinition> A table containing filters (name = {components...}) |
-
-### Returns
+#### Fields
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `system` | [SystemClass](/api/system#systemclass) |  |
----
+| `ENABLE_OPTIMIZATION` | boolean | When true, shallow-copies class methods onto each instance for faster access (default true) |
+## Methods
 
-```lua
-system = System.new( definition )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `definition` | table<string | FilterDefinition> A table containing filters (name = {components...}) |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `system` | [SystemClass](/api/system#systemclass) |  |
-
-## setEnabled
-
-Sets whether the System is enabled.
-
-```lua
-system = system:setEnabled( enable )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `enable` | boolean |  |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `system` | [System](/api/system#system) |  |
-
-## isEnabled
-
-Returns whether the System is enabled.
-
-```lua
-boolean = system:isEnabled()
-```
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `boolean` | boolean |  |
-
-## getWorld
-
-Returns the World the System is in.
-
-```lua
-world = system:getWorld()
-```
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `world` | [World](/api/world#world) |  |
-
-## init
-
-Callback for system initialization.
-
-```lua
-system:init( world )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `world` | [World](/api/world#world) | The World the System was added to |
-
-## onEnabled
-
-Callback for when a System is enabled.
-
-```lua
-system:onEnabled()
-```
-
-## onDisabled
-
-Callback for when a System is disabled.
-
-```lua
-system:onDisabled()
-```
+| Method | Description |
+| --- | --- |
+| [System.new](/api/system/new) | Creates a new SystemClass. The return value is a class; the World constructs instances when the class is added. |
+| [System:setEnabled](/api/system/set-enabled) | Sets whether the System is enabled. |
+| [System:isEnabled](/api/system/is-enabled) | Returns whether the System is enabled (enabled systems receive emit callbacks). |
+| [System:getWorld](/api/system/get-world) | Returns the World the System is in. |
+| [System:init](/api/system/init) | Callback for system initialization. |
+| [System:onEnabled](/api/system/on-enabled) | Callback when the system becomes enabled via `setEnabled(true)`. |
+| [System:onDisabled](/api/system/on-disabled) | Callback when the system becomes disabled via `setEnabled(false)`. |
 
 ## Types
 
-### SystemClass
-
-Registered system type returned by `System.new` / `System()`.
-
-Extends [System](/api/system#system).
+| Type | Description |
+| --- | --- |
+| [SystemClass](/api/system/system-class) | Registered system type returned by `System.new` / `System()`. |

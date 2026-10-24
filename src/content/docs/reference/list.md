@@ -17,183 +17,27 @@ If the `concord` folder is in the root directory of your game, you can import th
 List = require('concord.list')
 ```
 
-## new
+## List
 
-Creates a new List.
+Iterate in order with `ipairs(list)` over indices `1`..`list.size`.
+`List()` is equivalent to `List.new()`.
 
-```lua
-list = List.new()
-```
-
-### Returns
+#### Fields
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | [List](/api/list#list) |  |
+| `size` | integer | Number of items in the List |
+## Methods
 
-## add
-
-Adds an object to the List.
-
-Object must be of reference type
-Object may not be the string 'size', 'onAdded' or 'onRemoved'
-
-```lua
-list = list:add( obj )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `obj` | any | Object to add |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `list` | [List](/api/list#list) |  |
-
-## remove
-
-Removes an object from the List.
-
-```lua
-list:remove( obj )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `obj` | any | Object to remove |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-|  | [List](/api/list#list)\|nil | Returns self if removed; nil if the object was not in the List |
-
-## clear
-
-Clears the List completely.
-
-Does not call onRemoved.
-
-```lua
-list = list:clear()
-```
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `list` | [List](/api/list#list) |  |
-
-## has
-
-Returns true if the List has the object.
-
-```lua
-boolean = list:has( obj )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `obj` | any | Object to check for |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `boolean` | boolean |  |
-
-## get
-
-Returns the object at an index.
-
-```lua
-any = list:get( i )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `i` | integer | Index to get from |
-
-## indexOf
-
-Returns the index of an object in the List.
-
-Errors if the object is not in the List.
-
-```lua
-integer = list:indexOf( obj )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `obj` | any | Object to get index of |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `integer` | integer | index of object in the List. |
-
-## sort
-
-Sorts the List in place, using the order function.
-
-The order function is passed to table.sort internally so documentation on table.sort can be used as reference.
-
-```lua
-list = list:sort( order )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `order` | fun(a: any,  b: any): boolean | Function that takes two items (a and b) and returns true if a should go before b. |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `list` | [List](/api/list#list) |  |
-
-## onAdded
-
-Callback for when an item is added to the List.
-
-```lua
-list:onAdded( obj )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `obj` | any | Object that was added |
-
-## onRemoved
-
-Callback for when an item is removed from the List.
-
-Not called by List:clear.
-
-```lua
-list:onRemoved( obj )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `obj` | any | Object that was removed |
+| Method | Description |
+| --- | --- |
+| [List.new](/api/list/new) | Creates a new List. |
+| [List:add](/api/list/add) | Adds an object to the List. |
+| [List:remove](/api/list/remove) | Removes an object from the List. |
+| [List:clear](/api/list/clear) | Clears the List completely. |
+| [List:has](/api/list/has) | Returns true if the List has the object. |
+| [List:get](/api/list/get) | Returns the object at an index. |
+| [List:indexOf](/api/list/index-of) | Returns the index of an object in the List. |
+| [List:sort](/api/list/sort) | Sorts the List in place, using the order function. |
+| [List:onAdded](/api/list/on-added) | Callback for when an item is added to the List. |
+| [List:onRemoved](/api/list/on-removed) | Callback for when an item is removed from the List. |

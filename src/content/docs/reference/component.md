@@ -1,6 +1,6 @@
 ---
 title: "Component"
-description: "A pure data container that is contained by a single entity."
+description: "A pure data container attached to a single Entity."
 slug: api/component
 sidebar:
   order: 3
@@ -19,110 +19,20 @@ concord.component = require('concord.component')
 
 ## Component
 
-#### Fields
+Component instances are created when an Entity `:give`s the class; populate runs at attach time.
+## Methods
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `getName` | fun(self: [Component](/api/component#component)): string |  |
-| `hasName` | fun(self: [Component](/api/component#component)): boolean |  |
-| `serialize` | fun(self: [Component](/api/component#component)): table\|nil |  |
-| `deserialize` | fun(self: [Component](/api/component#component),  data: table): nil |  |
-| `removed` | fun(self: [Component](/api/component#component),  replaced: boolean): nil |  |
-## new
-
-Creates a new ComponentClass and registers it by name.
-
-```lua
-component = Component.new( name, populate )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `name` | string | Unique name of the ComponentClass |
-| `populate` | fun(component: [Component](/api/component#component), ...): nil | Function that populates a Component with values |
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `component` | [ComponentClass](/api/component#componentclass) |  |
-
-## hasName
-
-Returns true if the Component has a name.
-
-```lua
-boolean = component:hasName()
-```
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `boolean` | boolean |  |
-
-## getName
-
-Returns the name of the Component.
-
-```lua
-string = component:getName()
-```
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `string` | string |  |
-
-## removed
-
-Callback for when the Component is removed or replaced in an Entity.
-
-```lua
-component:removed( replaced )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `replaced` | boolean | True when the Component is being overwritten, false when it is being removed |
-
-## serialize
-
-Callback for when the Component is serialized as part of an Entity.
-
-```lua
-component:serialize()
-```
-
-### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-|  | table\|nil | Serialized data, or nil to omit this Component |
-
-## deserialize
-
-Callback for when the Component is deserialized from serialized data.
-
-```lua
-component:deserialize( data )
-```
-
-### Arguments
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `data` | table | Serialized data to copy onto this Component |
+| Method | Description |
+| --- | --- |
+| [Component.new](/api/component/new) | Creates a new ComponentClass and registers it by name. |
+| [Component:hasName](/api/component/has-name) | Returns true if the Component has a name. |
+| [Component:getName](/api/component/get-name) | Returns the name of the Component. |
+| [Component:removed](/api/component/removed) | Callback for when the Component is removed or replaced in an Entity. |
+| [Component:serialize](/api/component/serialize) | Callback for when the Component is serialized as part of an Entity. |
+| [Component:deserialize](/api/component/deserialize) | Callback for when the Component is deserialized from serialized data. |
 
 ## Types
 
-### ComponentClass
-
-Registered component type returned by `Component.new` / `Component()`.
-
-Extends [Component](/api/component#component).
+| Type | Description |
+| --- | --- |
+| [ComponentClass](/api/component/component-class) | Registered component type returned by `Component.new` / `Component()`. |

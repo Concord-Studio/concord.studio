@@ -18,13 +18,9 @@ Serializable = require('concord.builtins.serializable')
 
 The Component itself is not serialized.
 
-Extends [ComponentClass](/api/component#componentclass).
-## serialize
+Extends [ComponentClass](/api/component/component-class).
+## Methods
 
-Callback: When the Component gets serialized as part of an Entity.
-
-Returns nil so this marker is not written to serialized data.
-
-```lua
-serializable:serialize()
-```
+| Method | Description |
+| --- | --- |
+| [Serializable:serialize](/api/builtins/serializable/serialize) | Callback: When the Component gets serialized as part of an Entity. |
