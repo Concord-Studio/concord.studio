@@ -142,6 +142,12 @@
     padding-inline: 0.625rem;
   }
 
+  @media (min-width: 64rem) {
+    .mobile-nav-home {
+      display: none;
+    }
+  }
+
   /* Sidebar fills the pane; theme fixes .sidebar-content to 14rem */
   .sidebar-content {
     width: 100%;

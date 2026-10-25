@@ -3,12 +3,19 @@ import { getNavbarLinks } from "../lib/theme-navbar";
 import MobileNavLink from "./MobileNavLink.astro";
 import MobileNavSublist from "./MobileNavSublist.astro";
 
-const { sidebar } = Astro.locals.starlightRoute;
+const { sidebar, siteTitleHref } = Astro.locals.starlightRoute;
 const navLinks = await getNavbarLinks(Astro.currentLocale);
+
+const pathOf = (value: string) =>
+  value === "/" ? value : value.replace(/\/$/, "");
+const isHome = pathOf(Astro.url.pathname) === pathOf(siteTitleHref);
 ---
 
 <div class="mobile-nav">
   <div class="mobile-nav-content">
+    <div class="mobile-nav-home">
+      <MobileNavLink href={siteTitleHref} label="Home" isCurrent={isHome} />
+    </div>
     {
       navLinks.length > 0 && (
         <div class="mobile-nav-section">
