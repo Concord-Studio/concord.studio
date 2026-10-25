@@ -41,11 +41,11 @@ end
 
 `World:query` is fine to find one free slot. A dedicated Pool on the System is better if you recycle every frame.
 
-Do not assume `remove("inactive")` puts the bullet in `live` this iteration. Recycle, then wait until the next `update` to iterate `live`, or `give` the Components the current loop already understands. [Pool Flushing and Timing](pool-flushing-and-timing.md) is the timing.
+Do not assume `remove("inactive")` puts the bullet in `live` this iteration. Recycle, then wait until the next `update` to iterate `live`, or `give` the Components the current loop already understands. [Pool Flushing and Timing](/guides/pool-flushing-and-timing) is the timing.
 
-Clone a prefab once; reuse the instances you fire. [Cloning an Entity](cloning-an-entity.md) creates a new Entity from a snapshot. Reuse keeps the same object and swaps flags.
+Clone a prefab once; reuse the instances you fire. [Cloning an Entity](/guides/cloning-an-entity) creates a new Entity from a snapshot. Reuse keeps the same object and swaps flags.
 
 ## See also
 
-- [Entities](entities.md)
-- [Cloning an Entity](cloning-an-entity.md)
+- [Entities Guide](/guides/entities)
+- [Cloning an Entity](/guides/cloning-an-entity)

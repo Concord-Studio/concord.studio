@@ -27,6 +27,7 @@ Iterate in order with `ipairs(list)` over indices `1`..`list.size`.
 | Name | Type | Description |
 | --- | --- | --- |
 | `size` | integer | Number of items in the List |
+
 ## Methods
 
 | Method | Description |

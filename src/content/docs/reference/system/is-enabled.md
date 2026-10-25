@@ -4,6 +4,9 @@ description: "Returns whether the System is enabled (enabled systems receive emi
 slug: api/system/is-enabled
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← System](/api/system)
@@ -11,11 +14,11 @@ sidebar:
 Returns whether the System is enabled (enabled systems receive emit callbacks).
 
 ```lua
-boolean = system:isEnabled()
+enabled = system:isEnabled()
 ```
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `enabled` | boolean |  |

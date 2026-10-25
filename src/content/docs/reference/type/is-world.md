@@ -4,6 +4,9 @@ description: "Returns true if the value is a World instance."
 slug: api/type/is-world
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -13,7 +16,7 @@ Returns true if the value is a World instance.
 Use when validating optional world arguments to `Entity.new` or custom helpers.
 
 ```lua
-boolean = Type.isWorld( t )
+isWorld = Type.isWorld( t )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ boolean = Type.isWorld( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isWorld` | boolean |  |

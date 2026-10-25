@@ -4,6 +4,9 @@ description: "Clears the Pool associated to this Filter."
 slug: api/filter/clear
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

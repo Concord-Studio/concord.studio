@@ -16,15 +16,15 @@ end
 local crate2 = cloneEntity(world, crate)
 ```
 
-`Entity:serialize(true)` omits `key` so the copy does not steal the original's identity. If you *want* a new key, `give("key")` after. If you are writing a save, keep keys — that is [Serialization](serialization.md), not cloning.
+`Entity:serialize(true)` omits `key` so the copy does not steal the original's identity. If you *want* a new key, `give("key")` after. If you are writing a save, keep keys — that is [Serialization](/guides/serialization), not cloning.
 
 ## What is not a clone
 
 `Entity:getComponents` is a shallow copy of fields. The Component tables are the *same* objects. Mutating `copy.position` would mutate `original.position`. Do not use it to clone.
 
-[Cloning a Component](cloning-a-component.md) copies one instance onto an Entity that already exists. Use that when you only want `health` or `sprite`, not the whole bundle.
+[Cloning a Component](/guides/cloning-a-component) copies one instance onto an Entity that already exists. Use that when you only want `health` or `sprite`, not the whole bundle.
 
-An [assemblage](entities.md) plus a few `give`s is better when serialize is too coarse — when you want a new cat at a new position, not a photocopy including `dead`.
+An [assemblage](/guides/entities) plus a few `give`s is better when serialize is too coarse — when you want a new cat at a new position, not a photocopy including `dead`.
 
 ## After the copy
 
@@ -32,5 +32,5 @@ The copy is a new Entity in the World. Components whose `serialize` returned `ni
 
 ## See also
 
-- [Cloning a Component](cloning-a-component.md)
-- [Serialization](serialization.md)
+- [Cloning a Component](/guides/cloning-a-component)
+- [Serialization](/guides/serialization)

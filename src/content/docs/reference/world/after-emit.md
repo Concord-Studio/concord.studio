@@ -4,6 +4,9 @@ description: "Callback after World:emit has forwarded an event to Systems."
 slug: api/world/after-emit
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

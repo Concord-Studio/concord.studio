@@ -42,10 +42,10 @@ function Combat:update ()
 end
 ```
 
-A nested `emit` runs immediately. Swallowing, logging, or wrapping every emit is not a targeted emit — that is [Before and After Events](before-and-after-events.md).
+A nested `emit` runs immediately. Swallowing, logging, or wrapping every emit is not a targeted emit — that is [Before and After Events](/guides/before-and-after-events).
 
 ## See also
 
-- @{World:emit}
-- [Worlds](worlds.md)
-- [Before and After Events](before-and-after-events.md)
+- [World:emit](/api/world/emit)
+- [Worlds Guide](/guides/worlds)
+- [Before and After Events](/guides/before-and-after-events)

@@ -11,14 +11,14 @@ tableOfContents:
 
 [← Entity](/api/entity)
 
-### `entity:ensure( name, ... )`
+### `entity = entity:ensure( name, ... )`
 
 Ensures an Entity has a Component.
 
 If the Component already exists, no action is taken.
 
 ```lua
-entity:ensure( name, ... )
+entity = entity:ensure( name, ... )
 ```
 
 #### Arguments
@@ -32,13 +32,14 @@ entity:ensure( name, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [Entity](/api/entity#entity) |  |
+| `entity` | [Entity](/api/entity#entity) |  |
 ---
 
-### `entity:ensure( component )`
+
+### `entity = entity:ensure( component )`
 
 ```lua
-entity:ensure( component )
+entity = entity:ensure( component )
 ```
 
 Pass an existing Component instance (already populated, not attached to an entity). Skips name and populate arguments.
@@ -48,3 +49,9 @@ Pass an existing Component instance (already populated, not attached to an entit
 | Name | Type | Description |
 | --- | --- | --- |
 | `component` | [Component](/api/component#component) |  |
+
+#### Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `entity` | [Entity](/api/entity#entity) |  |

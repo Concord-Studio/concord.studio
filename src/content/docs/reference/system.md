@@ -35,6 +35,7 @@ each system's filters re-evaluate matching Entities and update pool membership.
 | Name | Type | Description |
 | --- | --- | --- |
 | `ENABLE_OPTIMIZATION` | boolean | When true, shallow-copies class methods onto each instance for faster access (default true) |
+
 ## Methods
 
 | Method | Description |

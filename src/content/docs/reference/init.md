@@ -20,7 +20,7 @@ Concord = require('concord')
 ## Concord
 
 Entry point: `local Concord = require("concord")` (adjust the path to your package layout).
-Exports `Entity`, `Component`, `Components`, `System`, `World`, `Type`, `utils`, and `builtins`.
+Exports `Entity`, `Component`, `Components`, `System`, `World`, `Filter`, `List`, `Type`, `utils`, and `builtins`.
 Types are callable constructors, e.g. `Concord.World()`, `Concord.Entity(world)`.
 Lowercase field names are deprecated compatibility aliases for the uppercase types.
 
@@ -33,6 +33,8 @@ Lowercase field names are deprecated compatibility aliases for the uppercase typ
 | `Components` | [Components](/api/components#components) |  |
 | `System` | [System](/api/system#system) |  |
 | `World` | [World](/api/world#world) |  |
+| `Filter` | [Filter](/api/filter#filter) |  |
+| `List` | [List](/api/list#list) |  |
 | `Type` | [Type](/api/type#type) |  |
 | `utils` | [Utils](/api/utils#utils) |  |
 | `builtins` | [Builtins](/api/builtins#builtins) |  |

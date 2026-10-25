@@ -4,6 +4,9 @@ description: "Requires files and stores them in a namespace table."
 slug: api/utils/load-namespace
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Utils](/api/utils)
@@ -16,7 +19,7 @@ Directory loading uses love.filesystem and requires LÖVE.
 If namespace is omitted, modules are still `require`d (side effect only) and this function returns nil.
 
 ```lua
-Utils.loadNamespace( pathOrFiles, namespace )
+namespace = Utils.loadNamespace( pathOrFiles, namespace )
 ```
 
 ### Arguments
@@ -30,4 +33,4 @@ Utils.loadNamespace( pathOrFiles, namespace )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | table\|nil | namespace The namespace table |
+| `namespace` | table\|nil | The namespace table |

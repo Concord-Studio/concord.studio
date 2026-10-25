@@ -4,6 +4,9 @@ description: "List of component names for one filter (`!name` to reject, or `Com
 slug: api/filter/filter-definition
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

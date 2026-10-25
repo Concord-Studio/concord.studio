@@ -4,6 +4,9 @@ description: "Callback for when an item is added to the List."
 slug: api/list/on-added
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)

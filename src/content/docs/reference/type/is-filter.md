@@ -4,6 +4,9 @@ description: "Returns true if the value is a Filter instance (internal pool driv
 slug: api/type/is-filter
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -11,7 +14,7 @@ sidebar:
 Returns true if the value is a Filter instance (internal pool driver; rarely needed in game code).
 
 ```lua
-boolean = Type.isFilter( t )
+isFilter = Type.isFilter( t )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = Type.isFilter( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isFilter` | boolean |  |

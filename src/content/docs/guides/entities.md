@@ -2,7 +2,7 @@
 title: "Entities"
 ---
 
-An Entity is a bundle of Components. On its own it is empty — a Component is a named piece of data, and those pieces are what make one Entity a Cat and another a Bullet. [Components](components.md) is where those shapes are defined.
+An Entity is a bundle of Components. On its own it is empty — a Component is a named piece of data, and those pieces are what make one Entity a Cat and another a Bullet. The [Components Guide](/guides/components) is where those shapes are defined.
 
 We will keep using the Cat from Getting Started:
 
@@ -56,7 +56,7 @@ Cat:remove("terrestrial")
 
 You might be tempted to just set `Cat.terrestrial = nil` by hand — don't. `remove` is what tells Concord the Entity changed. A hand-set `nil` is invisible to that bookkeeping.
 
-It is safe to call `remove` while you are iterating a list of Entities. Concord does not reshuffle that list under you mid-loop. Membership in those lists catches up a moment later; [Pool Flushing and Timing](pool-flushing-and-timing.md) is the full story if you need it.
+It is safe to call `remove` while you are iterating a list of Entities. Concord does not reshuffle that list under you mid-loop. Membership in those lists catches up a moment later; [Pool Flushing and Timing](/guides/pool-flushing-and-timing) is the full story if you need it.
 
 ## Assemblages
 
@@ -98,8 +98,9 @@ for _, entity in ipairs(cats) do
 end
 ```
 
-> [!NOTE]
-> Do not reach for `World:clear()` to kill one Entity. `clear` tears down the entire World. It is what you call when a level ends, not when one enemy dies.
+:::warning
+Do not reach for `World:clear()` to kill one Entity. `clear` tears down the entire World. It is what you call when a level ends, not when one enemy dies.
+:::
 
 ## The Entity's World
 
@@ -117,6 +118,6 @@ world:addEntity(Cat)
 
 ## See also
 
-- [Components](components.md) — the data you are giving and removing
-- [Systems](systems.md) — behavior over groups of Entities
-- @{Entity} — API
+- [Components Guide](/guides/components) — the data you are giving and removing
+- [Systems Guide](/guides/systems) — behavior over groups of Entities
+- [Entity](/api/entity) — API

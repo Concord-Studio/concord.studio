@@ -66,5 +66,5 @@ Cat:assemble(withTween, "position", "x", 200, 0.4)
 
 ## See also
 
-- [Systems](systems.md)
-- [Targeted Emits](targeted-emits.md)
+- [Systems Guide](/guides/systems)
+- [Targeted Emits](/guides/targeted-emits)

@@ -4,6 +4,9 @@ description: "Returns the List of Systems in the World."
 slug: api/world/get-systems
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,11 +14,11 @@ sidebar:
 Returns the List of Systems in the World.
 
 ```lua
-list = world:getSystems()
+systems = world:getSystems()
 ```
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | [List](/api/list#list) |  |
+| `systems` | [List](/api/list#list) |  |

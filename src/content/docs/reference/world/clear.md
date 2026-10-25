@@ -4,6 +4,9 @@ description: "Removes all Entities from the World and flushes."
 slug: api/world/clear
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

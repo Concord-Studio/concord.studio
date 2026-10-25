@@ -4,6 +4,9 @@ description: "Adds a System to the World."
 slug: api/world/add-system
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

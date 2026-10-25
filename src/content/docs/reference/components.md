@@ -26,6 +26,7 @@ Use `Components.get(name)`, `Components.has(name)`, or `Components[name]` / `Com
 | Name | Type | Description |
 | --- | --- | --- |
 | `__REJECT_PREFIX` | string | Reject prefix for filter lists (`"!"`); see `Components.reject` and FilterDefinition |
+
 ## Methods
 
 | Method | Description |

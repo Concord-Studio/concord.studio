@@ -4,6 +4,9 @@ description: "Checks that a custom Pool implements add, remove, has, and clear a
 slug: api/filter/is-valid-pool
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

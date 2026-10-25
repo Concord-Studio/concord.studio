@@ -4,6 +4,9 @@ description: "Adds an Entity to the Pool, if it passes the Filter."
 slug: api/filter/add
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)
@@ -26,4 +29,4 @@ filter = filter:add( e, bypass )
 | Name | Type | Description |
 | --- | --- | --- |
 | `filter` | [Filter](/api/filter#filter) |  |
-| `boolean` | boolean | added Whether the entity was added or not. |
+| `added` | boolean | Whether the entity was added or not. |

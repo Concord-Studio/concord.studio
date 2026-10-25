@@ -4,6 +4,9 @@ description: "Creates a new World."
 slug: api/world/new
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

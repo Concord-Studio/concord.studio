@@ -4,6 +4,9 @@ description: "Creates a new Entity and queues it to be added to the World."
 slug: api/world/new-entity
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,7 +14,7 @@ sidebar:
 Creates a new Entity and queues it to be added to the World.
 
 ```lua
-world:newEntity()
+e = world:newEntity()
 ```
 
 ### Returns

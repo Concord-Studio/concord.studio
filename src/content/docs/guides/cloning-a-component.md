@@ -18,7 +18,7 @@ Drop:give("position", 100, 80)
 
 `give(Prototype.health)` copies through `serialize` and `deserialize`. Populate arguments are ignored: the instance *is* the source.
 
-Use this when the interesting values already exist. Use an [assemblage](entities.md) when you are describing a *kind* of Entity from arguments (`asCat(x, y)`).
+Use this when the interesting values already exist. Use an [assemblage](/guides/entities) when you are describing a *kind* of Entity from arguments (`asCat(x, y)`).
 
 `ensure` with an instance is "copy this unless they already have one":
 
@@ -28,7 +28,7 @@ crate:ensure(Prototype.health)
 
 ## What will not copy
 
-If `serialize` returns `nil`, there is nothing to copy. The builtin `serializable` flag does that on purpose — it is a marker, not data. A Component that holds a LÖVE Body and returns `nil` from `serialize` cannot be cloned this way until you teach it to round-trip. [Serialization](serialization.md) is that article.
+If `serialize` returns `nil`, there is nothing to copy. The builtin `serializable` flag does that on purpose — it is a marker, not data. A Component that holds a LÖVE Body and returns `nil` from `serialize` cannot be cloned this way until you teach it to round-trip. [Serialization](/guides/serialization) is that article.
 
 The default serialize is a shallow copy. Nested tables are shared between the original and the clone. If `inventory.slots` is a table, both Entities will see the same slots until you write a deeper `serialize`.
 
@@ -36,6 +36,6 @@ Replacing an existing Component still runs `removed` with `replaced == true` on 
 
 ## See also
 
-- @{Entity:give}
-- [Serialization](serialization.md)
-- [Entities](entities.md)
+- [Entity:give](/api/entity/give)
+- [Serialization](/guides/serialization)
+- [Entities Guide](/guides/entities)

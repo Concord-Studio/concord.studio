@@ -4,6 +4,9 @@ description: "Entity collection backing a Filter. Default instances are List; cu
 slug: api/filter/pool
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

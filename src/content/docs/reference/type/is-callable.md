@@ -4,6 +4,9 @@ description: "Returns true if the value is a function or has a `__call` metameth
 slug: api/type/is-callable
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -13,7 +16,7 @@ Returns true if the value is a function or has a `__call` metamethod.
 Use before treating a value as a populate function, pool constructor, or generator.
 
 ```lua
-boolean = Type.isCallable( t )
+callable = Type.isCallable( t )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ boolean = Type.isCallable( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `callable` | boolean |  |

@@ -1,8 +1,8 @@
 // @ts-check
-import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
-import starlightThemeBlack from "starlight-theme-black";
 import { fileURLToPath } from "node:url";
+import starlight from "@astrojs/starlight";
+import starlightThemeBlack from "starlight-theme-black";
 import referenceIndex from "./src/sidebar.json" with { type: "json" };
 
 /** @param {Array<Record<string, any>>} entries */

@@ -26,7 +26,7 @@ Do this when the order can change every frame and the Pool is not huge. Sorting 
 
 ## Sort less often
 
-If Entities only need to be ordered when they *join* the Pool, hook `onAdded` and insert into a side structure you keep sorted. [Pool onAdded / onRemoved](pool-callbacks.md) is that pattern.
+If Entities only need to be ordered when they *join* the Pool, hook `onAdded` and insert into a side structure you keep sorted. [Pool onAdded / onRemoved](/guides/pool-callbacks) is that pattern.
 
 ## What not to do
 
@@ -34,5 +34,5 @@ Do not assume `ipairs(pool)` is spawn order. Do not put a `flush` or an `emit` t
 
 ## See also
 
-- @{List:sort}
-- [Pool onAdded / onRemoved](pool-callbacks.md)
+- [List:sort](/api/list/sort)
+- [Pool onAdded / onRemoved](/guides/pool-callbacks)

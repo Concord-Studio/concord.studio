@@ -4,6 +4,9 @@ description: "Raises a formatted error."
 slug: api/utils/error
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Utils](/api/utils)

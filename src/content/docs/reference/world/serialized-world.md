@@ -4,6 +4,9 @@ description: "Payload from `World:serialize`, passed to `World:deserialize`."
 slug: api/world/serialized-world
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

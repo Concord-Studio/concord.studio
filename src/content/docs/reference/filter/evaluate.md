@@ -4,6 +4,9 @@ description: "Evaluates an Entity against this Filter and updates the Pool."
 slug: api/filter/evaluate
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

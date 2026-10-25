@@ -4,6 +4,9 @@ description: "Emits a callback in the World."
 slug: api/world/emit
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

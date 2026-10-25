@@ -20,6 +20,7 @@ concord.component = require('concord.component')
 ## Component
 
 Component instances are created when an Entity `:give`s the class; populate runs at attach time.
+
 ## Methods
 
 | Method | Description |

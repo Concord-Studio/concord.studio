@@ -4,6 +4,9 @@ description: "Gets an Entity by its key."
 slug: api/world/get-entity-by-key
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,7 +14,7 @@ sidebar:
 Gets an Entity by its key.
 
 ```lua
-world:getEntityByKey( key )
+entity = world:getEntityByKey( key )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ world:getEntityByKey( key )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [Entity](/api/entity#entity)\|nil |  |
+| `entity` | [Entity](/api/entity#entity)\|nil |  |

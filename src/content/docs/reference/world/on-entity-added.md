@@ -4,6 +4,9 @@ description: "Callback for when an Entity is added to the World."
 slug: api/world/on-entity-added
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

@@ -4,6 +4,9 @@ description: "Returns the List of flushed Entities in the World."
 slug: api/world/get-entities
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,11 +14,11 @@ sidebar:
 Returns the List of flushed Entities in the World.
 
 ```lua
-list = world:getEntities()
+entities = world:getEntities()
 ```
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | [List](/api/list#list) |  |
+| `entities` | [List](/api/list#list) |  |

@@ -4,6 +4,9 @@ description: "Sets a named resource on the World (singleton shared state, not an
 slug: api/world/set-resource
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

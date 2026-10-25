@@ -4,6 +4,9 @@ description: "Creates a new List."
 slug: api/list/new
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)

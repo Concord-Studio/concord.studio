@@ -91,5 +91,5 @@ A method should only act on the Component it belongs to. `translate` only ever t
 
 ## See also
 
-- @{Component} — API
-- [Entities](entities.md) — attaching, replacing, and removing Components
+- [Component](/api/component) — API
+- [Entities Guide](/guides/entities) — attaching, replacing, and removing Components

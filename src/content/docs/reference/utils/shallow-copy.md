@@ -4,6 +4,9 @@ description: "Copies keys from orig into target. Existing keys in target are ove
 slug: api/utils/shallow-copy
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Utils](/api/utils)
@@ -11,7 +14,7 @@ sidebar:
 Copies keys from orig into target. Existing keys in target are overwritten.
 
 ```lua
-matches = Utils.shallowCopy( orig, target )
+target = Utils.shallowCopy( orig, target )
 ```
 
 ### Arguments
@@ -25,4 +28,4 @@ matches = Utils.shallowCopy( orig, target )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | table | target |
+| `target` | table |  |

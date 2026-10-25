@@ -11,14 +11,14 @@ tableOfContents:
 
 [← Entity](/api/entity)
 
-### `entity:give( name, ... )`
+### `entity = entity:give( name, ... )`
 
 Gives an Entity a Component.
 
 If the Component already exists, it's overridden by this new Component.
 
 ```lua
-entity:give( name, ... )
+entity = entity:give( name, ... )
 ```
 
 #### Arguments
@@ -32,13 +32,14 @@ entity:give( name, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [Entity](/api/entity#entity) |  |
+| `entity` | [Entity](/api/entity#entity) |  |
 ---
 
-### `entity:give( component )`
+
+### `entity = entity:give( component )`
 
 ```lua
-entity:give( component )
+entity = entity:give( component )
 ```
 
 Pass an existing Component instance (already populated, not attached to an entity). Skips name and populate arguments.
@@ -48,6 +49,12 @@ Pass an existing Component instance (already populated, not attached to an entit
 | Name | Type | Description |
 | --- | --- | --- |
 | `component` | [Component](/api/component#component) |  |
+
+#### Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `entity` | [Entity](/api/entity#entity) |  |
 
 ### Usage
 

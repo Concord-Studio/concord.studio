@@ -39,6 +39,6 @@ Emits you fire from inside `beforeEmit` or `afterEmit` do not re-enter the hooks
 
 ## See also
 
-- @{World:beforeEmit}
-- @{World:afterEmit}
-- [Worlds](worlds.md)
+- [World:beforeEmit](/api/world/before-emit)
+- [World:afterEmit](/api/world/after-emit)
+- [Worlds Guide](/guides/worlds)

@@ -4,6 +4,9 @@ description: "Registered component type returned by `Component.new` / `Component
 slug: api/component/component-class
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Component](/api/component)

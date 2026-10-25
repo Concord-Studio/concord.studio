@@ -4,6 +4,9 @@ description: "Returns a shallow copy of the Entity's fields, excluding __world a
 slug: api/entity/get-components
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -14,7 +17,7 @@ This is primarily the Entity's Components. Extra non-component fields are also c
 Mutating a copied Component still mutates the Entity's Component.
 
 ```lua
-matches = entity:getComponents( output )
+components = entity:getComponents( output )
 ```
 
 ### Arguments
@@ -27,4 +30,4 @@ matches = entity:getComponents( output )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | table |  |
+| `components` | table |  |

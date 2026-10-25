@@ -4,6 +4,9 @@ description: "Clears the List completely."
 slug: api/list/clear
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)

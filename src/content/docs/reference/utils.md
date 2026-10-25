@@ -4,6 +4,9 @@ description: "Helper module for misc operations"
 slug: api/utils
 sidebar:
   order: 10
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 ## Require

@@ -4,6 +4,9 @@ description: "Callback for when the Component is deserialized from serialized da
 slug: api/component/deserialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Component](/api/component)

@@ -4,6 +4,9 @@ description: "Returns true if the value is an Entity instance."
 slug: api/type/is-entity
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -13,7 +16,7 @@ Returns true if the value is an Entity instance.
 Use when accepting arbitrary tables that might be entities (e.g. world APIs, serializers).
 
 ```lua
-boolean = Type.isEntity( t )
+isEntity = Type.isEntity( t )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ boolean = Type.isEntity( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isEntity` | boolean |  |

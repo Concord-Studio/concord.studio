@@ -4,6 +4,9 @@ description: "Returns the World the Entity is in, or nil when not in a world."
 slug: api/entity/get-world
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -11,11 +14,11 @@ sidebar:
 Returns the World the Entity is in, or nil when not in a world.
 
 ```lua
-entity:getWorld()
+world = entity:getWorld()
 ```
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [World](/api/world#world)\|nil |  |
+| `world` | [World](/api/world#world)\|nil |  |

@@ -4,6 +4,9 @@ description: "Removes an object from the List."
 slug: api/list/remove
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)
@@ -11,7 +14,7 @@ sidebar:
 Removes an object from the List.
 
 ```lua
-list:remove( obj )
+list = list:remove( obj )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ list:remove( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [List](/api/list#list)\|nil | Returns self if removed; nil if the object was not in the List |
+| `list` | [List](/api/list#list)\|nil | Returns self if removed; nil if the object was not in the List |

@@ -4,6 +4,9 @@ description: "Deserializes Entities into the World."
 slug: api/world/deserialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

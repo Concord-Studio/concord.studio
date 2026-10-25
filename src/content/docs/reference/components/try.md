@@ -4,6 +4,9 @@ description: "Returns true and the ComponentClass if one was registered with the
 slug: api/components/try
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Components](/api/components)
@@ -13,7 +16,7 @@ Returns true and the ComponentClass if one was registered with the specified nam
 or false and an error otherwise
 
 ```lua
-boolean = Components.try( name, acceptRejected )
+ok = Components.try( name, acceptRejected )
 ```
 
 ### Arguments
@@ -27,6 +30,6 @@ boolean = Components.try( name, acceptRejected )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean | ok |
-|  | [ComponentClass](/api/component/component-class)\|string | componentClass ComponentClass on success, or an error string on failure |
-|  | string\|boolean | rejected On success: the stripped Component name if the name had the Reject Prefix, otherwise false |
+| `ok` | boolean |  |
+| `componentClass` | [ComponentClass](/api/component/component-class)\|string | ComponentClass on success, or an error string on failure |
+| `rejected` | string\|boolean | On success: the stripped Component name if the name had the Reject Prefix, otherwise false |

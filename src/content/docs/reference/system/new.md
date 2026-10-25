@@ -26,7 +26,7 @@ system = System.new( name, definition )
 | Name | Type | Description |
 | --- | --- | --- |
 | `name` | string | Name of the System. If the first argument is not a string, it is treated as the definition. |
-| `definition` | table<string, | FilterDefinition> Map of pool names to filter definitions (component names, optional `!` reject entries) |
+| `definition` | table<string, [FilterDefinition](/api/filter/filter-definition)> | Map of pool names to filter definitions (component names, optional `!` reject entries) |
 
 #### Returns
 
@@ -34,6 +34,7 @@ system = System.new( name, definition )
 | --- | --- | --- |
 | `system` | [SystemClass](/api/system/system-class) |  |
 ---
+
 
 ### `system = System.new( definition )`
 
@@ -45,7 +46,7 @@ system = System.new( definition )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `definition` | table<string | FilterDefinition> Map of pool names to filter definitions (component names, optional `!` reject entries) |
+| `definition` | table<string, [FilterDefinition](/api/filter/filter-definition)> | Map of pool names to filter definitions (component names, optional `!` reject entries) |
 
 #### Returns
 

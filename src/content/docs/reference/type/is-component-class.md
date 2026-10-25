@@ -4,6 +4,9 @@ description: "Returns true if the value is a registered ComponentClass (not a co
 slug: api/type/is-component-class
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -13,7 +16,7 @@ Returns true if the value is a registered ComponentClass (not a component instan
 Use before `World`-level APIs that expect a class, or when validating `Component.new` results.
 
 ```lua
-boolean = Type.isComponentClass( t )
+isComponentClass = Type.isComponentClass( t )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ boolean = Type.isComponentClass( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isComponentClass` | boolean |  |

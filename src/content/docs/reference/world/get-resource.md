@@ -4,6 +4,9 @@ description: "Gets a named resource from the World."
 slug: api/world/get-resource
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,7 +14,7 @@ sidebar:
 Gets a named resource from the World.
 
 ```lua
-any = world:getResource( name )
+resource = world:getResource( name )
 ```
 
 ### Arguments
@@ -19,3 +22,9 @@ any = world:getResource( name )
 | Name | Type | Description |
 | --- | --- | --- |
 | `name` | string | Name of the resource |
+
+### Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `resource` | any | The resource, or nil if none was set |

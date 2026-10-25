@@ -4,6 +4,9 @@ description: "Validates a Filter Definition to make sure every component is vali
 slug: api/filter/validate
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

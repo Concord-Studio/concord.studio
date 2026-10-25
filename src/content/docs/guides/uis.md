@@ -34,13 +34,13 @@ World-space health bars, floating damage numbers, inventory slots that *are* ite
 Two layouts:
 
 - **Same World, a flag.** `{"widget", "position"}` versus `{"widget", "!worldspace"}`. Cheap, and the HUD can read `health` directly.
-- **A second World.** Isolation is the feature; sharing "the player" then goes through a [resource](entity-keys-and-resources.md) or a key you copy in.
+- **A second World.** Isolation is the feature; sharing "the player" then goes through a [resource](/guides/entity-keys-and-resources) or a key you copy in.
 
 Prefer enable/disable on a `Hud` System over destroying widgets every time the menu closes.
 
-If you are writing a UI library on top of Concord, `beforeEmit` / `afterEmit` can wrap layout and input. See [Before and After Events](before-and-after-events.md).
+If you are writing a UI library on top of Concord, `beforeEmit` / `afterEmit` can wrap layout and input. See [Before and After Events](/guides/before-and-after-events).
 
 ## See also
 
-- [Worlds](worlds.md)
-- [Making a game with Concord and LÖVE](making-a-game.md)
+- [Worlds Guide](/guides/worlds)
+- [Making a game with Concord and LÖVE](/guides/making-a-game)

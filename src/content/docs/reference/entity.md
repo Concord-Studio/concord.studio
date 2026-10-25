@@ -34,6 +34,7 @@ Prefer `:give`, `:get`, and `:has` so unregistered names error instead of silent
 | Name | Type | Description |
 | --- | --- | --- |
 | `__world?` | [World](/api/world#world) |  |
+
 ## Methods
 
 | Method | Description |

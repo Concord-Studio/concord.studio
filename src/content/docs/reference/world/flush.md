@@ -4,6 +4,9 @@ description: "Applies queued Entity additions, removals, and dirty reevaluations
 slug: api/world/flush
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

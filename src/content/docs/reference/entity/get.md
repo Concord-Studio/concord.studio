@@ -4,6 +4,9 @@ description: "Gets a Component from the Entity."
 slug: api/entity/get
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -11,7 +14,7 @@ sidebar:
 Gets a Component from the Entity.
 
 ```lua
-entity:get( name )
+component = entity:get( name )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ entity:get( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [Component](/api/component#component)\|nil | The Component, or nil if the Entity does not have it |
+| `component` | [Component](/api/component#component)\|nil | The Component, or nil if the Entity does not have it |

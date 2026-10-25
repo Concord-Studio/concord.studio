@@ -91,7 +91,7 @@ This is the place to set defaults, cache a value you will use every tick, or oth
 
 State on `self` is per World: two Worlds with the same System class get two instances. State you put on the *class* is shared across those instances.
 
-Keep that state small and about this System — gravity, a paused flag, a count. If several Systems need the same object (a camera, an atlas), that object belongs on the World, not stuffed into one System and fished out of another. [Entity Keys and Resources](entity-keys-and-resources.md) covers that pattern.
+Keep that state small and about this System — gravity, a paused flag, a count. If several Systems need the same object (a camera, an atlas), that object belongs on the World, not stuffed into one System and fished out of another. [Entity Keys and Resources](/guides/entity-keys-and-resources) covers that pattern.
 
 ## System's World
 
@@ -108,6 +108,6 @@ A System can emit from inside a callback. That nested event runs immediately; yo
 
 ## See also
 
-- @{System} — API
-- [Worlds](worlds.md) — adding Systems and emitting events
-- [Entities](entities.md) — the bundles these Pools hold
+- [System](/api/system) — API
+- [Worlds Guide](/guides/worlds) — adding Systems and emitting events
+- [Entities Guide](/guides/entities) — the bundles these Pools hold

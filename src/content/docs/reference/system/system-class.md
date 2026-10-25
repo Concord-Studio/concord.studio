@@ -4,6 +4,9 @@ description: "Registered system type returned by `System.new` / `System()`."
 slug: api/system/system-class
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← System](/api/system)

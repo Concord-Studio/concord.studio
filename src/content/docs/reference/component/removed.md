@@ -4,6 +4,9 @@ description: "Callback for when the Component is removed or replaced in an Entit
 slug: api/component/removed
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Component](/api/component)

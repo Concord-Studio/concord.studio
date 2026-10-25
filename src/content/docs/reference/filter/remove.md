@@ -4,6 +4,9 @@ description: "Removes an Entity from the Pool associated to this Filter."
 slug: api/filter/remove
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

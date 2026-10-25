@@ -4,6 +4,9 @@ description: "Assembles an Entity by calling `assemblage(self, ...)` and returni
 slug: api/entity/assemble
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -11,7 +14,7 @@ sidebar:
 Assembles an Entity by calling `assemblage(self, ...)` and returning `self`.
 
 ```lua
-entity:assemble( assemblage, ... )
+entity = entity:assemble( assemblage, ... )
 ```
 
 ### Arguments
@@ -25,4 +28,4 @@ entity:assemble( assemblage, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [Entity](/api/entity#entity) |  |
+| `entity` | [Entity](/api/entity#entity) |  |

@@ -4,6 +4,9 @@ description: "Serializes the Entity's Components."
 slug: api/entity/serialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -14,7 +17,7 @@ Output shape: optional `key` field (key value) unless `ignoreKey`; other compone
 each with `__name` plus fields from `Component:serialize`. Components that return nil from serialize are omitted.
 
 ```lua
-matches = entity:serialize( ignoreKey )
+data = entity:serialize( ignoreKey )
 ```
 
 ### Arguments
@@ -27,7 +30,7 @@ matches = entity:serialize( ignoreKey )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `matches` | table | Serialized Entity data |
+| `data` | table | Serialized Entity data |
 
 ### See also
 

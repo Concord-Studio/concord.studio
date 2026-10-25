@@ -4,6 +4,9 @@ description: "Checks if the Pool associated to this Filter contains the passed E
 slug: api/filter/has
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)
@@ -11,7 +14,7 @@ sidebar:
 Checks if the Pool associated to this Filter contains the passed Entity.
 
 ```lua
-boolean = filter:has( e )
+exists = filter:has( e )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = filter:has( e )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean | Whether the Entity exists. |
+| `exists` | boolean | Whether the Entity exists. |

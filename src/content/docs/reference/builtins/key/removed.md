@@ -4,6 +4,9 @@ description: "Callback: Clears the World key when the Component is removed (not 
 slug: api/builtins/key/removed
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Key](/api/builtins/key)

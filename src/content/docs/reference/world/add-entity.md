@@ -4,6 +4,9 @@ description: "Queues an Entity to be added to the World."
 slug: api/world/add-entity
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

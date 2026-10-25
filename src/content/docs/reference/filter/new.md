@@ -4,6 +4,9 @@ description: "Creates a new Filter"
 slug: api/filter/new
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)
@@ -27,5 +30,5 @@ filter = Filter.new( name, def )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `filter` | [Filter](/api/filter#filter) | filter The new Filter |
-| `pool` | [Pool](/api/filter/pool) | pool The associated Pool |
+| `filter` | [Filter](/api/filter#filter) | The new Filter |
+| `pool` | [Pool](/api/filter/pool) | The associated Pool |

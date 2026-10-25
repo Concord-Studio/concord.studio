@@ -4,6 +4,9 @@ description: "Creates a new ComponentClass and registers it by name."
 slug: api/component/new
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Component](/api/component)

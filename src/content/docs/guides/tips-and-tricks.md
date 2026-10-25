@@ -34,11 +34,11 @@ end
 
 ## Utils
 
-`Utils.shallowCopy` copies keys from one table onto another. Nested tables are shared, not cloned. Concord uses it internally for serialize and for the "copy this class onto the instance" optimization. You may want it when you are writing your own `serialize`. You usually do not want it as a substitute for [Cloning a Component](cloning-a-component.md).
+`Utils.shallowCopy` copies keys from one table onto another. Nested tables are shared, not cloned. Concord uses it internally for serialize and for the "copy this class onto the instance" optimization. You may want it when you are writing your own `serialize`. You usually do not want it as a substitute for [Cloning a Component](/guides/cloning-a-component).
 
-`Utils.loadNamespace` belongs to its own article: [Loading Namespaces](loading-namespaces.md).
+`Utils.loadNamespace` belongs to its own article: [Loading Namespaces](/guides/loading-namespaces).
 
 ## See also
 
-- [Entities](entities.md)
-- [Making a game with Concord and LÖVE](making-a-game.md)
+- [Entities Guide](/guides/entities)
+- [Making a game with Concord and LÖVE](/guides/making-a-game)

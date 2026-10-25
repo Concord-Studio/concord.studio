@@ -26,12 +26,12 @@ Do not spawn Entities, do not `flush`, and do not assume Pools already contain y
 
 ## When to use this
 
-Game code should prefer assemblages and Systems. Reach for `__entity` when a Component must register itself with something the World owns: the key hash, a physics world stored as a [resource](entity-keys-and-resources.md), a spatial index you do not want a System to have to notice.
+Game code should prefer assemblages and Systems. Reach for `__entity` when a Component must register itself with something the World owns: the key hash, a physics world stored as a [resource](/guides/entity-keys-and-resources), a spatial index you do not want a System to have to notice.
 
 Tear that registration down in `removed`. `key` does this; your Component should too.
 
 ## See also
 
-- @{key}
-- [Component:removed](component-removed.md)
-- [Components](components.md)
+- [key](/api/builtins/key)
+- [Component:removed Guide](/guides/component-removed)
+- [Components Guide](/guides/components)

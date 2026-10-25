@@ -28,8 +28,9 @@ The same System class in two Worlds becomes two instances. Adding the same class
 
 Look up another System with `world:getSystem` when you need to enable it, disable it, or read state you stored on `self`.
 
-> [!NOTE]
-> `World:clear()` tears down the entire World: every Entity, including ones still queued to be added. Call it when a level ends, not when one enemy dies.
+:::warning
+`World:clear()` tears down the entire World: every Entity, including ones still queued to be added. Call it when a level ends, not when one enemy dies.
+:::
 
 ## Events
 
@@ -49,10 +50,10 @@ end
 
 That is the whole bridge. Systems do not subscribe themselves to LÖVE; they subscribe to the World, and you forward what you care about.
 
-[Making a game with Concord and LÖVE](making-a-game.md) is this loop as a vertical slice.
+[Making a game with Concord and LÖVE](/guides/making-a-game) is this loop as a vertical slice.
 
 ## See also
 
-- @{World} — API
-- [Systems](systems.md) — who listens
-- [Making a game with Concord and LÖVE](making-a-game.md)
+- [World](/api/world) — API
+- [Systems Guide](/guides/systems) — who listens
+- [Making a game with Concord and LÖVE](/guides/making-a-game)

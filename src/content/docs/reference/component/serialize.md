@@ -4,6 +4,9 @@ description: "Callback for when the Component is serialized as part of an Entity
 slug: api/component/serialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Component](/api/component)
@@ -11,11 +14,11 @@ sidebar:
 Callback for when the Component is serialized as part of an Entity.
 
 ```lua
-component:serialize()
+data = component:serialize()
 ```
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | table\|nil | Serialized data, or nil to omit this Component |
+| `data` | table\|nil | Serialized data, or nil to omit this Component |

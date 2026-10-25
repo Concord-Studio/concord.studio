@@ -4,6 +4,9 @@ description: "Returns the World the System is in."
 slug: api/system/get-world
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← System](/api/system)

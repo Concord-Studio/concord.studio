@@ -4,6 +4,9 @@ description: "Returns whether the World has a System."
 slug: api/world/has-system
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,7 +14,7 @@ sidebar:
 Returns whether the World has a System.
 
 ```lua
-boolean = world:hasSystem( systemClass )
+has = world:hasSystem( systemClass )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = world:hasSystem( systemClass )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `has` | boolean |  |

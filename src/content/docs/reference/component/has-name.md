@@ -4,6 +4,9 @@ description: "Returns true if the Component has a name."
 slug: api/component/has-name
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Component](/api/component)
@@ -11,11 +14,11 @@ sidebar:
 Returns true if the Component has a name.
 
 ```lua
-boolean = component:hasName()
+hasName = component:hasName()
 ```
 
 ### Returns
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `hasName` | boolean |  |

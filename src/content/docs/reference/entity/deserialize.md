@@ -4,6 +4,9 @@ description: "Deserializes Components onto the Entity from the array portion of 
 slug: api/entity/deserialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)

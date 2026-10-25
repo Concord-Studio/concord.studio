@@ -47,10 +47,10 @@ Resources are not serialized. If a save must remember the camera, that is a Comp
 
 ## Keys and saves
 
-`World:serialize` includes each Entity's key unless you pass `ignoreKeys`. `World:deserialize` restores them so `getEntityByKey` still works after a load. [Serialization](serialization.md) is the full path.
+`World:serialize` includes each Entity's key unless you pass `ignoreKeys`. `World:deserialize` restores them so `getEntityByKey` still works after a load. [Serialization](/guides/serialization) is the full path.
 
 ## See also
 
-- @{key}
-- @{World:setResource}
-- [Serialization](serialization.md)
+- [key](/api/builtins/key)
+- [World:setResource](/api/world/set-resource)
+- [Serialization](/guides/serialization)

@@ -29,6 +29,7 @@ Override optional callbacks below on the world instance (methods are copied onto
 | Name | Type | Description |
 | --- | --- | --- |
 | `ENABLE_OPTIMIZATION` | boolean | When true, shallow-copies class methods onto each instance for faster access (default true) |
+
 ## Methods
 
 | Method | Description |

@@ -27,7 +27,7 @@ function love.draw ()
 end
 ```
 
-`update` is where simulation happens, `draw` is where you paint, and extra arguments (`dt`) land on the System methods with the same names. Drawing usually should not reshuffle Pools; [Pool Flushing and Timing](pool-flushing-and-timing.md) is that story.
+`update` is where simulation happens, `draw` is where you paint, and extra arguments (`dt`) land on the System methods with the same names. Drawing usually should not reshuffle Pools; [Pool Flushing and Timing](/guides/pool-flushing-and-timing) is that story.
 
 ## Components
 
@@ -104,7 +104,7 @@ function Body:keyreleased (key)
 end
 ```
 
-Storing "the player" as a resource is the cheap version of [keys](entity-keys-and-resources.md). A flag Component plus a Pool (`{"player", "velocity"}`) is the ECS version. Either is fine at this scale.
+Storing "the player" as a resource is the cheap version of [keys](/guides/entity-keys-and-resources). A flag Component plus a Pool (`{"player", "velocity"}`) is the ECS version. Either is fine at this scale.
 
 ## Spawning
 
@@ -130,6 +130,6 @@ The window, the filesystem, a one-off debug overlay, and most menus are not Enti
 
 ## See also
 
-- [Worlds](worlds.md)
-- [Systems](systems.md)
-- [Tips and Tricks](tips-and-tricks.md)
+- [Worlds Guide](/guides/worlds)
+- [Systems Guide](/guides/systems)
+- [Tips and Tricks](/guides/tips-and-tricks)

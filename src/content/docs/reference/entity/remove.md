@@ -4,6 +4,9 @@ description: "Removes a Component from an Entity."
 slug: api/entity/remove
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -11,7 +14,7 @@ sidebar:
 Removes a Component from an Entity.
 
 ```lua
-entity:remove( name )
+entity = entity:remove( name )
 ```
 
 ### Arguments
@@ -24,7 +27,7 @@ entity:remove( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [Entity](/api/entity#entity) |  |
+| `entity` | [Entity](/api/entity#entity) |  |
 
 ### See also
 

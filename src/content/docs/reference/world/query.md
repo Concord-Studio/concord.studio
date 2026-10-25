@@ -29,8 +29,9 @@ Pass a function as onMatch. It is called once per matching Entity. Nothing is re
 | Name | Type | Description |
 | --- | --- | --- |
 | `def` | [FilterDefinition](/api/filter/filter-definition) | Filter definition (component names, with ! prefix to reject) |
-| `onMatch` | fun(e: [Entity](/api/entity#entity)) | Called for each match. |
+| `onMatch` | fun(e: [Entity](/api/entity#entity)) | Callback for each match, or a table to fill |
 ---
+
 
 ### `matches = world:query( def, onMatch )`
 
@@ -45,7 +46,7 @@ Collect matches into a table and return it. onMatch is optional; when omitted, a
 | Name | Type | Description |
 | --- | --- | --- |
 | `def` | [FilterDefinition](/api/filter/filter-definition) | Filter definition (component names, with ! prefix to reject) |
-| `onMatch?` | table? | Optional. Table to fill with matches; when omitted, a new empty table is allocated and returned. |
+| `onMatch?` | table? | Callback for each match, or a table to fill |
 
 #### Returns
 

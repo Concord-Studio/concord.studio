@@ -4,6 +4,9 @@ description: "Returns true if the container has the ComponentClass with the spec
 slug: api/components/has
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Components](/api/components)
@@ -11,7 +14,7 @@ sidebar:
 Returns true if the container has the ComponentClass with the specified name
 
 ```lua
-boolean = Components.has( name )
+has = Components.has( name )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = Components.has( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `has` | boolean |  |

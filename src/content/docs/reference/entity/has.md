@@ -4,6 +4,9 @@ description: "Returns true if the Entity has a Component."
 slug: api/entity/has
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)
@@ -11,7 +14,7 @@ sidebar:
 Returns true if the Entity has a Component.
 
 ```lua
-boolean = entity:has( name )
+has = entity:has( name )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = entity:has( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `has` | boolean |  |

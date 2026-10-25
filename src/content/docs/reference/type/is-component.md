@@ -4,6 +4,9 @@ description: "Returns true if the value is a Component instance attached to an e
 slug: api/type/is-component
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -13,7 +16,7 @@ Returns true if the value is a Component instance attached to an entity.
 Use when iterating entity fields or handling `Entity:give` component-instance overload.
 
 ```lua
-boolean = Type.isComponent( t )
+isComponent = Type.isComponent( t )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ boolean = Type.isComponent( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isComponent` | boolean |  |

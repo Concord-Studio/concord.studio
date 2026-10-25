@@ -4,6 +4,9 @@ description: "Checks if an Entity fulfills the Filter requirements."
 slug: api/filter/eligible
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)
@@ -11,7 +14,7 @@ sidebar:
 Checks if an Entity fulfills the Filter requirements.
 
 ```lua
-boolean = filter:eligible( e )
+eligible = filter:eligible( e )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = filter:eligible( e )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `eligible` | boolean |  |

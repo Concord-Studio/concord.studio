@@ -4,6 +4,9 @@ description: "Prefix a component's name with the currently set Reject Prefix"
 slug: api/components/reject
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Components](/api/components)
@@ -11,7 +14,7 @@ sidebar:
 Prefix a component's name with the currently set Reject Prefix
 
 ```lua
-string = Components.reject( name )
+name = Components.reject( name )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ string = Components.reject( name )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `string` | string |  |
+| `name` | string |  |

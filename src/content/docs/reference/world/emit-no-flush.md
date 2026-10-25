@@ -4,6 +4,9 @@ description: "Emits a callback in the World without flushing."
 slug: api/world/emit-no-flush
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

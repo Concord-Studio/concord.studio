@@ -4,6 +4,9 @@ description: "Serializes serializable Entities in the World."
 slug: api/world/serialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -13,7 +16,7 @@ Serializes serializable Entities in the World.
 Flushes first. Only Entities with a serializable Component are included.
 
 ```lua
-serializedWorld = world:serialize( ignoreKeys )
+data = world:serialize( ignoreKeys )
 ```
 
 ### Arguments
@@ -26,7 +29,7 @@ serializedWorld = world:serialize( ignoreKeys )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `serializedWorld` | [SerializedWorld](/api/world/serialized-world) | Serialized world data |
+| `data` | [SerializedWorld](/api/world/serialized-world) | Serialized world data |
 
 ### See also
 

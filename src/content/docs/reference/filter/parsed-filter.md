@@ -4,6 +4,9 @@ description: "Interleaved component names and required flags from Filter.parse (
 slug: api/filter/parsed-filter
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)

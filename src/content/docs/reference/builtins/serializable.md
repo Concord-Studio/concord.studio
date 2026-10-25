@@ -4,6 +4,9 @@ description: "Built-in marker Component. Entities with this Component are includ
 slug: api/builtins/serializable
 sidebar:
   order: 2
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 ## Require
@@ -19,6 +22,7 @@ Serializable = require('concord.builtins.serializable')
 The Component itself is not serialized.
 
 Extends [ComponentClass](/api/component/component-class).
+
 ## Methods
 
 | Method | Description |

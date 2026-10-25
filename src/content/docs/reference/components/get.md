@@ -4,6 +4,9 @@ description: "Returns the ComponentClass with the specified name"
 slug: api/components/get
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Components](/api/components)

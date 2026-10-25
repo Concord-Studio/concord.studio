@@ -21,9 +21,9 @@ world:deserialize(snapshot, true) -- startClean: replace what is here
 
 `Entity:serialize` / `Entity:deserialize` do one Entity. `World:serialize` walks serializable Entities. `World:deserialize` can `startClean`, and can ignore the saved key-generator state if you are merging into a World that already has keys.
 
-Pass `ignoreKeys` when the snapshot should not carry identity. Keep keys when the snapshot *is* the save. See [Entity Keys and Resources](entity-keys-and-resources.md).
+Pass `ignoreKeys` when the snapshot should not carry identity. Keep keys when the snapshot *is* the save. See [Entity Keys and Resources](/guides/entity-keys-and-resources).
 
-Component classes must already be registered before deserialize. Load your `components/` folder at startup ([Loading Namespaces](loading-namespaces.md)); a missing name is an error, not a skip.
+Component classes must already be registered before deserialize. Load your `components/` folder at startup ([Loading Namespaces](/guides/loading-namespaces)); a missing name is an error, not a skip.
 
 ## Custom serialize / deserialize
 
@@ -40,12 +40,12 @@ function Sprite:deserialize (data)
 end
 ```
 
-Return `nil` from `serialize` to omit the Component entirely (how `serializable` works). A Component that cannot be copied with [Cloning a Component](cloning-a-component.md) is usually one that returns `nil`.
+Return `nil` from `serialize` to omit the Component entirely (how `serializable` works). A Component that cannot be copied with [Cloning a Component](/guides/cloning-a-component) is usually one that returns `nil`.
 
-If the Component owns a Body or a Canvas, tear it down in `removed` so a replace-during-deserialize does not leak. See [Component:removed](component-removed.md).
+If the Component owns a Body or a Canvas, tear it down in `removed` so a replace-during-deserialize does not leak. See [Component:removed Guide](/guides/component-removed).
 
 ## See also
 
-- @{serializable}
-- [Cloning a Component](cloning-a-component.md)
-- [Entity Keys and Resources](entity-keys-and-resources.md)
+- [serializable](/api/builtins/serializable)
+- [Cloning a Component](/guides/cloning-a-component)
+- [Entity Keys and Resources](/guides/entity-keys-and-resources)

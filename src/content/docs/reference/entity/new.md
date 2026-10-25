@@ -4,6 +4,9 @@ description: "Creates a new Entity. Optionally queues it to be added to a World.
 slug: api/entity/new
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Entity](/api/entity)

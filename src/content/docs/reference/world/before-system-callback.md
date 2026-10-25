@@ -4,6 +4,9 @@ description: "Callback before World:emit forwards an event to a System."
 slug: api/world/before-system-callback
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -14,7 +17,7 @@ Returning a truthy value skips the System listener and afterSystemCallback for t
 Nested emits are forbidden inside this callback
 
 ```lua
-boolean = world:beforeSystemCallback( system, eventName, ... )
+skip = world:beforeSystemCallback( system, eventName, ... )
 ```
 
 ### Arguments
@@ -29,4 +32,4 @@ boolean = world:beforeSystemCallback( system, eventName, ... )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean? | Truthy to skip the System listener and afterSystemCallback |
+| `skip` | boolean? | Truthy to skip the System listener and afterSystemCallback |

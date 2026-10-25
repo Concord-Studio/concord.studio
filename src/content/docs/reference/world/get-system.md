@@ -4,6 +4,9 @@ description: "Gets a System from the World."
 slug: api/world/get-system
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)
@@ -11,7 +14,7 @@ sidebar:
 Gets a System from the World.
 
 ```lua
-world:getSystem( systemClass )
+system = world:getSystem( systemClass )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ world:getSystem( systemClass )
 
 | Name | Type | Description |
 | --- | --- | --- |
-|  | [System](/api/system#system)\|nil | The system instance, or nil if the class was not added |
+| `system` | [System](/api/system#system)\|nil | The system instance, or nil if the class was not added |

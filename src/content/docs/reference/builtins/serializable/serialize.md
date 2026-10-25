@@ -4,6 +4,9 @@ description: "Callback: When the Component gets serialized as part of an Entity.
 slug: api/builtins/serializable/serialize
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Serializable](/api/builtins/serializable)

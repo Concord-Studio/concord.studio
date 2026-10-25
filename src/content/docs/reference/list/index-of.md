@@ -4,6 +4,9 @@ description: "Returns the index of an object in the List."
 slug: api/list/index-of
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)
@@ -13,7 +16,7 @@ Returns the index of an object in the List.
 Errors if the object is not in the List.
 
 ```lua
-integer = list:indexOf( obj )
+index = list:indexOf( obj )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ integer = list:indexOf( obj )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `integer` | integer | index of object in the List. |
+| `index` | integer | Index of the object in the List. |

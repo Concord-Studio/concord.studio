@@ -4,6 +4,9 @@ description: "Returns true if the value is a SystemClass template (not a live sy
 slug: api/type/is-system-class
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -13,7 +16,7 @@ Returns true if the value is a SystemClass template (not a live system instance)
 Use before `World:addSystem`, `World:hasSystem`, or `World:getSystem`.
 
 ```lua
-boolean = Type.isSystemClass( t )
+isSystemClass = Type.isSystemClass( t )
 ```
 
 ### Arguments
@@ -26,4 +29,4 @@ boolean = Type.isSystemClass( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isSystemClass` | boolean |  |

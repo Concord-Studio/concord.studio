@@ -4,6 +4,9 @@ description: "Sorts the List in place, using the order function."
 slug: api/list/sort
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)

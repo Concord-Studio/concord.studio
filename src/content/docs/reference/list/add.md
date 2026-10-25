@@ -4,6 +4,9 @@ description: "Adds an object to the List."
 slug: api/list/add
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)

@@ -24,12 +24,12 @@ end
 
 ## What it is not
 
-`removed` is Component teardown. It is not "this Entity left a Pool" — that is [Pool onAdded / onRemoved](pool-callbacks.md). It is not "this Entity left the World" — that is `World:onEntityRemoved`.
+`removed` is Component teardown. It is not "this Entity left a Pool" — that is [Pool onAdded / onRemoved](/guides/pool-callbacks). It is not "this Entity left the World" — that is `World:onEntityRemoved`.
 
 If you `destroy` an Entity, Concord removes `key` first so `key:removed(false)` still runs. Other Components are not automatically `remove`d one by one; if they own resources, either `remove` them yourself before `destroy`, or tear those resources down from `onEntityRemoved`.
 
 ## See also
 
-- @{Component:removed}
-- @{key}
-- [Pool onAdded / onRemoved](pool-callbacks.md)
+- [Component:removed](/api/component/removed)
+- [key](/api/builtins/key)
+- [Pool onAdded / onRemoved](/guides/pool-callbacks)

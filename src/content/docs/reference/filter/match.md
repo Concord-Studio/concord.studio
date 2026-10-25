@@ -4,6 +4,9 @@ description: "Returns true if the Entity matches a parsed Filter."
 slug: api/filter/match
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)
@@ -11,7 +14,7 @@ sidebar:
 Returns true if the Entity matches a parsed Filter.
 
 ```lua
-boolean = Filter.match( e, filter )
+matches = Filter.match( e, filter )
 ```
 
 ### Arguments
@@ -25,4 +28,4 @@ boolean = Filter.match( e, filter )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `matches` | boolean |  |

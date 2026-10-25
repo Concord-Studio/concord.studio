@@ -4,6 +4,9 @@ description: "Callback for when an Entity is removed from the World."
 slug: api/world/on-entity-removed
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

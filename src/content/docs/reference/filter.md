@@ -23,6 +23,7 @@ Used to filter Entities with specific Components.
 
 A Filter has an associated Pool that can contain any amount of Entities.
 `Filter(...)` is equivalent to `Filter.new(...)`.
+
 ## Methods
 
 | Method | Description |

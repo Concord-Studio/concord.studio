@@ -40,6 +40,6 @@ Load Components before you spawn Entities or deserialize. Load Systems before `a
 
 ## See also
 
-- @{Utils.loadNamespace}
-- [Serialization](serialization.md)
-- [Components](components.md)
+- [Utils.loadNamespace](/api/utils/load-namespace)
+- [Serialization](/guides/serialization)
+- [Components Guide](/guides/components)

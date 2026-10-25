@@ -18,8 +18,9 @@ Once added you can import Concord in your code
 local Concord = require("path.to.concord")
 ```
 
-> [!NOTE]
-> Please note that the file imported should be `concord/init.lua`, some Lua runtimes will allow you to require `concord` but others will need `concord.init`
+:::note
+The file imported should be `concord/init.lua`, some Lua runtimes will allow you to require `concord` but others will need `concord.init`
+:::
 
 ### World
 
@@ -59,9 +60,11 @@ Sometimes you don't need to store data on the Component since the Component itse
 Concord.Component("terrestrial")
 ```
 
-> [!NOTE]
-> All Components are registered to Concord itself, not to a specific World.
-> This is why all the Components you define, regardless of the World you use them in, MUST have different names, two different Components can't share a name.
+:::note
+All Components are registered to Concord itself, not to a specific World.
+
+This is why all the Components you define, regardless of the World you use them in, MUST have different names, two different Components can't share a name.
+:::
 
 ### Entities
 
@@ -87,8 +90,9 @@ print(Cat.position.x, Cat.position.y) -- Prints: 50, 50
 if Cat.terrestrial then print("Walks!") end -- Prints: Walks! 
 ```
 
-> [!NOTE]
-> Any Component can be given to any Entity ONCE. You can't give a Component multiple times, giving the same Component one more time will override the previous instance of the Component.
+:::note
+Any Component can be given to any Entity ONCE. You can't give a Component multiple times, giving the same Component one more time will override the previous instance of the Component.
+:::
 
 ### Filters
 
@@ -163,9 +167,11 @@ To do that first the System needs to be added to our World
 world:addSystem(Movement)
 ```
 
-> [!NOTE]
-> You can add each System once to a given World.
-> A System can be added to multiple Worlds (they will be different/separate instances of the System).
+:::note
+You can add each System once to a given World.
+
+A System can be added to multiple Worlds (they will be different/separate instances of the System).
+:::
 
 Finally we need to fire the `move` event, to do that, we don't call the System directly, instead we emit the event to the World
 
@@ -202,6 +208,6 @@ We defined a few big terms and how they are used in Concord, but to summarize th
 
 These are Concord definitions, and although they may apply to other ECS libraries or frameworks, some differences may exist.
 
-With this we have covered the basics. Continue with [Components](guides/components.md.html), then [Entities](guides/entities.md.html), [Systems](guides/systems.md.html), and [Worlds](guides/worlds.md.html). After those, [Making a game with Concord and LÖVE](guides/making-a-game.md.html) brings everything together.
+With this we have covered the basics. Continue with the [Components Guide](/guides/components), then the [Entities Guide](/guides/entities), the [Systems Guide](/guides/systems), and the [Worlds Guide](/guides/worlds). After those, [Making a game with Concord and LÖVE](/guides/making-a-game) brings everything together.
 
-If you don't see the benefits, consider reading [Why ECS?](guides/why-ecs.md.html), this goes into the design decisions made with Concord.
+If you don't see the benefits, consider reading [Why ECS?](/guides/why-ecs), this goes into the design decisions made with Concord.

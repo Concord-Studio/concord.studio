@@ -4,6 +4,9 @@ description: "Callback for when an item is removed from the List."
 slug: api/list/on-removed
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← List](/api/list)

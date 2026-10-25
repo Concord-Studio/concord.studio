@@ -4,6 +4,9 @@ description: "Sets the function used to generate Entity keys."
 slug: api/world/set-key-generator
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← World](/api/world)

@@ -4,6 +4,9 @@ description: "Parses a Filter Definition into a single interleaved table."
 slug: api/filter/parse
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Filter](/api/filter)
@@ -14,7 +17,7 @@ Entries are stored as name, required pairs: {name, true, name, false, ...}
 where true means the Component is required and false means it is rejected.
 
 ```lua
-parsedFilter = Filter.parse( name, def )
+filter = Filter.parse( name, def )
 ```
 
 ### Arguments
@@ -28,4 +31,4 @@ parsedFilter = Filter.parse( name, def )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `parsedFilter` | [ParsedFilter](/api/filter/parsed-filter) | Parsed filter |
+| `filter` | [ParsedFilter](/api/filter/parsed-filter) | Parsed filter |

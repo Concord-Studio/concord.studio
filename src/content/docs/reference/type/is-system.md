@@ -4,6 +4,9 @@ description: "Returns true if the value is a System instance belonging to a Worl
 slug: api/type/is-system
 sidebar:
   hidden: true
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 2
 ---
 
 [← Type](/api/type)
@@ -11,7 +14,7 @@ sidebar:
 Returns true if the value is a System instance belonging to a World.
 
 ```lua
-boolean = Type.isSystem( t )
+isSystem = Type.isSystem( t )
 ```
 
 ### Arguments
@@ -24,4 +27,4 @@ boolean = Type.isSystem( t )
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `boolean` | boolean |  |
+| `isSystem` | boolean |  |
