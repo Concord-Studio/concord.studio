@@ -1,6 +1,7 @@
 // @ts-check
 
 import { fileURLToPath } from "node:url";
+import solid from "@astrojs/solid-js";
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import starlightThemeBlack from "starlight-theme-black";
@@ -37,6 +38,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    solid(),
     starlight({
       logo: {
         light: "./src/assets/light-logo.svg",

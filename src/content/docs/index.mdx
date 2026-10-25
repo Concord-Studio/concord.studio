@@ -16,25 +16,32 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import ApiTour from '../../components/home/ApiTour.astro';
 
-## Next steps
+<ApiTour />
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+## Keep going
+
+<CardGrid>
+	<LinkCard
+		title="Getting Started"
+		href="/guides/get-started/"
+		description="Install Concord and build a world, components, entities, and systems."
+	/>
+	<LinkCard
+		title="A LÖVE game"
+		href="/guides/making-a-game/"
+		description="Wire Concord into love.load, love.update, and love.draw."
+	/>
+	<LinkCard
+		title="The basics"
+		href="/guides/components/"
+		description="Components, entities, systems, and worlds."
+	/>
+	<LinkCard
+		title="API reference"
+		href="/api/"
+		description="Worlds, entities, components, systems, and filters."
+	/>
 </CardGrid>

@@ -1,0 +1,34 @@
+---
+import { Code } from "@astrojs/starlight/components";
+import { steps } from "./steps";
+import WorldPreview from "./WorldPreview";
+import "./tour.css";
+---
+
+<section class="home-tour">
+	<div class="home-tour-intro">
+		<h2>How a game is written</h2>
+	</div>
+	<div class="home-stage">
+		<div class="home-pin">
+			<WorldPreview
+				client:load
+				titles={steps.map((step) => step.title)}
+				summaries={steps.map((step) => step.summary)}
+			/>
+		</div>
+		<div class="home-steps">
+			{
+				steps.map((step, index) => (
+					<article
+						class:list={["home-step", { "is-active": index === 0 }]}
+						data-step={index}
+					>
+						<p class="home-step-text">{step.description}</p>
+						<Code code={step.code} lang="lua" title={step.title} />
+					</article>
+				))
+			}
+		</div>
+	</div>
+</section>
