@@ -51,12 +51,6 @@ export default defineConfig({
       ],
       plugins: [
         starlightThemeBlack({
-          navLinks: [
-            {
-              label: "Home",
-              link: "/",
-            },
-          ],
           docs: {
             showMarkdownActions: {
               agents: {

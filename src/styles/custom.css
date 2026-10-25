@@ -19,6 +19,72 @@
     max-width: unset;
   }
 
+  @media (max-width: 49.99rem) {
+    header.header .header {
+      justify-content: flex-start;
+    }
+
+    header.header .header > div:has(> site-search) {
+      margin-inline-start: auto;
+    }
+  }
+
+  @media (max-width: 47.99rem) {
+    header.header site-search {
+      display: flex;
+      width: auto;
+      min-width: 0;
+    }
+
+    header.header site-search::after {
+      display: none;
+    }
+
+    header.header site-search > button[data-open-modal] {
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      min-width: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--sl-color-text-accent);
+      cursor: pointer;
+    }
+
+    header.header site-search > button[data-open-modal]:hover {
+      color: var(--sl-color-white);
+    }
+
+    header.header site-search > button[data-open-modal] > span {
+      display: none;
+    }
+
+    header.header site-search > button[data-open-modal] svg {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    header.header {
+      position: fixed;
+    }
+
+    header.header .title-wrapper {
+      overflow: visible;
+    }
+
+    header.header .site-title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
   /* Mobile menu link alignment (global so dev HMR always picks it up) */
   .mobile-nav {
     --mobile-nav-link-label-padding: 0.625rem;

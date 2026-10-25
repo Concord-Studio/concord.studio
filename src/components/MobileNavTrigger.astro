@@ -3,7 +3,7 @@ import MobileNav from "./MobileNav.astro";
 ---
 
 <black-menu-button class="print:hidden">
-  <button class="sl-flex md:sl-hidden" aria-expanded="false" aria-controls="starlight__sidebar">
+  <button class="sl-flex" aria-expanded="false" aria-controls="starlight__sidebar">
     <div class="hamburger">
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
@@ -73,10 +73,6 @@ import MobileNav from "./MobileNav.astro";
     -webkit-tap-highlight-color: transparent;
     border-radius: calc(var(--radius) - 2px);
     transition: background-color 0.15s ease;
-
-    @media (min-width: 64rem) {
-      display: none;
-    }
   }
 
   .hamburger {
